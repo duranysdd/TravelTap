@@ -1,10 +1,57 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    public int damage = 1;                  
-    public float knockbackForce = 5f;      
-    public float invincibilityTime = 1f;    
+    public int damage = 1; 
+    public float knockbackForce = 15f;
+    public float invincibilityTime = 1f; 
+
+    public float turnInterval = 2f; 
+    public float checkRadius = 0.1f;
+    public LayerMask graundLayer;
+    public Transform groundCheck;
+    
+    private Rigidbody2D rb;
+    private int direction = 1;
+    private bool isGrounded;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.freezeRotation = true;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX; 
+        }
+
+        if (groundCheck == null)
+        {
+            Debug.LogError("¡Configura el Transform 'groundCheck' en el Inspector del enemigo!");
+        }
+
+        StartCoroutine(PatrolInPlace());
+    }
+
+    void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, graundLayer);
+        
+    }
+
+    private IEnumerator PatrolInPlace()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(turnInterval);
+            
+
+            direction *= -1;
+            
+
+            transform.localScale = new Vector3(direction * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,20 +59,9 @@ public class Enemigo : MonoBehaviour
 
         if (player != null && !player.isInvincible) 
         {
-
-            Vector2 hitDirection = (player.transform.position - transform.position).normalized;
-            Vector2 knockback = new Vector2(hitDirection.x, 0.5f) * knockbackForce;
-
-            player.TakeDamage(damage, false);
-
-            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector2.zero; 
-                rb.AddForce(knockback, ForceMode2D.Impulse);
-            }
-
-            player.StartCoroutine(player.Invincibility(invincibilityTime));
+            player.TakeDamage(damage); 
+            player.Knockback(transform.position, knockbackForce);
+            player.StartInvincibility(invincibilityTime);
         }
     }
 }

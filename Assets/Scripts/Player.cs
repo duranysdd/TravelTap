@@ -1,39 +1,33 @@
 using System.Collections; 
 using UnityEngine;
-using UnityEngine.UI;
+// using UnityEngine.UI; 
 
 public class Player : MonoBehaviour
 {
     [HideInInspector] public bool isInvincible = false;
-
-    [Header("Vectores")]
-    public Vector2 playerVelocity;
-    public Vector2 jumpVelocity;    
-    public Vector2 input=Vector2.zero;
+    [HideInInspector] private bool isKnockedBack = false;
 
     [Header("Movimiento")]
-    public float speed = 5;
-    private Rigidbody2D rb2d;
-    private float moveInput;
-    public float Jump = 4;
-    private bool isGrounded;
-    public Transform groundCheck;
+    public float speed = 5f;
+    public float Jump = 8f;
     public float checkRadius = 0.1f;
+    public Transform groundCheck;
     public LayerMask graundLayer;
+    
+    private Rigidbody2D rb2d;
     private Animator anim;
+    private float moveInput;
+    private bool isGrounded;
 
     [Header("Inventario")]
     public int collectibles = 0;
 
     [Header("Vida del jugador")]
-    public int maxHealth = 5;       
-    public int currentHealth;        
-    public Image[] hearts;           
-    public Sprite fullHeart;         
-    public Sprite emptyHeart;        
+    public int maxHealth = 5;
+    public int currentHealth; 
 
     [Header("Respawn")]
-    public Transform respawnPoint;   
+    public Transform respawnPoint;
     public Transform nearRespawnPoint; 
 
     public void Start()
@@ -41,32 +35,35 @@ public class Player : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-        UpdateHeartsUI();
+        // UpdateHeartsUI(); // <-- Eliminado
 
         if (respawnPoint == null)
             respawnPoint = transform;
     }
 
-    [System.Obsolete]
     public void Update()
     {
-        moveInput = Input.GetAxis("Horizontal");
-        rb2d.linearVelocity = new Vector2(moveInput * speed, rb2d.velocity.y);
+        if (isKnockedBack)
+            return;
 
+        // --- Movimiento Horizontal ---
+        moveInput = Input.GetAxisRaw("Horizontal");
+        rb2d.linearVelocity = new Vector2(moveInput * speed, rb2d.linearVelocity.y);
+
+        // --- Voltear Sprite ---
         if (moveInput != 0)
         {
-            float baseScaleX = Mathf.Abs(transform.localScale.x);
-            float currentScaleY = transform.localScale.y;
-            float currentScaleZ = transform.localScale.z;
-            float newScaleX = baseScaleX * Mathf.Sign(moveInput);
-            transform.localScale = new Vector3(newScaleX, currentScaleY, currentScaleZ);
+            float newScaleX = Mathf.Abs(transform.localScale.x) * Mathf.Sign(moveInput);
+            transform.localScale = new Vector3(newScaleX, transform.localScale.y, transform.localScale.z);
         }
 
+        // --- Salto ---
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, Jump);
         }
 
+        // --- Animación ---
         anim.SetFloat("walk", Mathf.Abs(moveInput));
     }
 
@@ -74,18 +71,68 @@ public class Player : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, graundLayer);
     }
+    
+    // --- LÓGICA DE KNOCKBACK ---
+    public void Knockback(Vector3 enemyPosition, float force)
+    {
+        isKnockedBack = true;
+        
+        Vector2 hitDirection = (transform.position - enemyPosition).normalized;
+        Vector2 knockbackVector = new Vector2(hitDirection.x, 0.7f).normalized * force;
 
+        rb2d.linearVelocity = Vector2.zero; 
+        
+        rb2d.AddForce(knockbackVector, ForceMode2D.Impulse);
+        
+        StartCoroutine(StopKnockback(0.2f));
+    }
+
+    private IEnumerator StopKnockback(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        isKnockedBack = false;
+    }
+    
+    public void StartInvincibility(float duration)
+    {
+        StartCoroutine(Invincibility(duration));
+    }
+
+    public IEnumerator Invincibility(float duration)
+    {
+        isInvincible = true;
+        
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            Color originalColor = sr.color;
+            for (float i = 0; i < duration; i += 0.1f)
+            {
+                sr.enabled = !sr.enabled;
+                yield return new WaitForSeconds(0.1f);
+            }
+            sr.enabled = true;
+            sr.color = originalColor;
+        }
+        else
+        {
+            yield return new WaitForSeconds(duration);
+        }
+
+        isInvincible = false;
+    }
+    
+    
     public void AddCollectible(int amount)
     {
         collectibles += amount;
     }
 
-    // --- SISTEMA DE VIDA ---
     public void TakeDamage(int amount, bool causeRespawn = false)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHeartsUI();
+        // UpdateHeartsUI(); // <-- Eliminado
 
         Debug.Log("Vida actual: " + currentHealth);
 
@@ -95,7 +142,6 @@ public class Player : MonoBehaviour
         }
         else if (causeRespawn)
         {
-            // Daño por pinchos: reaparece en punto cercano
             if (nearRespawnPoint != null)
                 transform.position = nearRespawnPoint.position;
             else
@@ -107,7 +153,6 @@ public class Player : MonoBehaviour
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHeartsUI();
     }
 
     private void Die()
@@ -115,40 +160,5 @@ public class Player : MonoBehaviour
         Debug.Log("Jugador ha muerto. Reiniciando...");
         transform.position = respawnPoint.position;
         currentHealth = maxHealth;
-        UpdateHeartsUI();
-    }
-
-    private void UpdateHeartsUI()
-    {
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < currentHealth)
-                hearts[i].sprite = fullHeart;
-            else
-                hearts[i].sprite = emptyHeart;
-
-            hearts[i].enabled = i < maxHealth;
-        }
-    }
-
-    //INVULNERABILIDAD
-    public IEnumerator Invincibility(float duration)
-    {
-        isInvincible = true;
-
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
-        {
-            Color originalColor = sr.color;
-            sr.color = new Color(1f, 1f, 1f, 0.5f); // semi-transparente
-            yield return new WaitForSeconds(duration);
-            sr.color = originalColor;
-        }
-        else
-        {
-            yield return new WaitForSeconds(duration);
-        }
-
-        isInvincible = false;
     }
 }
