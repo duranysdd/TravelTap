@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Enemigo : MonoBehaviour
@@ -7,50 +6,78 @@ public class Enemigo : MonoBehaviour
     public float knockbackForce = 15f;
     public float invincibilityTime = 1f; 
 
-    public float turnInterval = 2f; 
-    public float checkRadius = 0.1f;
-    public LayerMask graundLayer;
-    public Transform groundCheck;
+    [Header("Patrulla con Puntos")]
+    public Transform pointA; 
+    public Transform pointB; 
+    public float moveSpeed = 2f;
+    public float tolerance = 0.3f;
     
+    private Vector3 targetPosition;
     private Rigidbody2D rb;
-    private int direction = 1;
-    private bool isGrounded;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.freezeRotation = true;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX; 
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation; 
         }
 
-        if (groundCheck == null)
+        if (pointA == null || pointB == null)
         {
-            Debug.LogError("¡Configura el Transform 'groundCheck' en el Inspector del enemigo!");
+            Debug.LogError("¡Configura los Patrol Points A y B en el Inspector! El enemigo no se moverá.");
+            enabled = false; 
+            return;
         }
 
-        StartCoroutine(PatrolInPlace());
+        // CORRECCIÓN CLAVE: Fuerza la escala X a ser positiva.
+        // Esto normaliza la dirección "hacia adelante" antes de que comience el movimiento.
+        Vector3 localScale = transform.localScale;
+        localScale.x = Mathf.Abs(localScale.x);
+        transform.localScale = localScale;
+
+        float distA = Vector3.Distance(transform.position, pointA.position);
+        float distB = Vector3.Distance(transform.position, pointB.position);
+        
+        targetPosition = (distA < distB) ? pointB.position : pointA.position;
+        
+        Flip();
     }
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, graundLayer);
+        if (rb == null) return;
         
+        Vector3 currentPosition = transform.position;
+        
+        if (Mathf.Abs(targetPosition.x - currentPosition.x) < tolerance)
+        {
+            targetPosition = (targetPosition == pointB.position) ? pointA.position : pointB.position;
+            
+            Flip();
+        }
+        
+        float directionX = Mathf.Sign(targetPosition.x - currentPosition.x);
+        rb.linearVelocity = new Vector2(directionX * moveSpeed, rb.linearVelocity.y);
     }
 
-    private IEnumerator PatrolInPlace()
+    private void Flip()
     {
-        while (true)
+        bool lookLeft = targetPosition.x < transform.position.x;
+        
+        Vector3 localScale = transform.localScale;
+
+        if (lookLeft)
         {
-            yield return new WaitForSeconds(turnInterval);
-            
-
-            direction *= -1;
-            
-
-            transform.localScale = new Vector3(direction * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            localScale.x = -Mathf.Abs(localScale.x);
         }
+        else
+        {
+
+            localScale.x = Mathf.Abs(localScale.x);
+        }
+        
+        transform.localScale = localScale;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
