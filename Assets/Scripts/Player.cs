@@ -1,6 +1,5 @@
-using System.Collections; 
+using System.Collections;
 using UnityEngine;
-// using UnityEngine.UI; 
 
 public class Player : MonoBehaviour
 {
@@ -13,77 +12,91 @@ public class Player : MonoBehaviour
     public float checkRadius = 0.1f;
     public Transform groundCheck;
     public LayerMask graundLayer;
-    
+    private bool atacando;
+    private bool isGrounded;
+    private float moveInput;
+
     private Rigidbody2D rb2d;
     private Animator anim;
-    private float moveInput;
-    private bool isGrounded;
 
     [Header("Inventario")]
     public int collectibles = 0;
 
     [Header("Vida del jugador")]
     public int maxHealth = 5;
-    public int currentHealth; 
+    public int currentHealth;
 
     [Header("Respawn")]
     public Transform respawnPoint;
-    public Transform nearRespawnPoint; 
+    public Transform nearRespawnPoint;
 
-    public void Start()
+    private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-        // UpdateHeartsUI(); // <-- Eliminado
 
         if (respawnPoint == null)
             respawnPoint = transform;
     }
 
-    public void Update()
+    private void Update()
     {
         if (isKnockedBack)
             return;
 
-        // --- Movimiento Horizontal ---
+        if (!atacando)
+            movimientos();
+
+        animaciones();
+    }
+
+    private void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, graundLayer);
+    }
+
+    public void movimientos()
+    {
         moveInput = Input.GetAxisRaw("Horizontal");
+
+        if (atacando)
+        {
+            rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y);
+            return;
+        }
+
         rb2d.linearVelocity = new Vector2(moveInput * speed, rb2d.linearVelocity.y);
 
-        // --- Voltear Sprite ---
         if (moveInput != 0)
         {
             float newScaleX = Mathf.Abs(transform.localScale.x) * Mathf.Sign(moveInput);
             transform.localScale = new Vector3(newScaleX, transform.localScale.y, transform.localScale.z);
         }
 
-        // --- Salto ---
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
+        if (Input.GetButtonDown("Jump") && isGrounded && !atacando)
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, Jump);
-        }
 
-        // --- Animación ---
-        anim.SetFloat("walk", Mathf.Abs(moveInput));
+        if (Input.GetKeyDown(KeyCode.Z) && !atacando && !isKnockedBack && isGrounded)
+            Atacando();
     }
 
-    void FixedUpdate()
+    public void animaciones()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, graundLayer);
+        anim.SetFloat("walk", Mathf.Abs(moveInput));
+        anim.SetBool("Atacando", atacando);
     }
-    
-    // --- LÓGICA DE KNOCKBACK ---
+
     public void Knockback(Vector3 enemyPosition, float force)
     {
         isKnockedBack = true;
-        
+
         Vector2 hitDirection = (transform.position - enemyPosition).normalized;
         Vector2 knockbackVector = new Vector2(hitDirection.x, 0.7f).normalized * force;
 
-        rb2d.linearVelocity = Vector2.zero; 
-        
+        rb2d.linearVelocity = Vector2.zero;
         rb2d.AddForce(knockbackVector, ForceMode2D.Impulse);
-        
+
         StartCoroutine(StopKnockback(0.2f));
     }
 
@@ -92,7 +105,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(duration);
         isKnockedBack = false;
     }
-    
+
     public void StartInvincibility(float duration)
     {
         StartCoroutine(Invincibility(duration));
@@ -101,7 +114,7 @@ public class Player : MonoBehaviour
     public IEnumerator Invincibility(float duration)
     {
         isInvincible = true;
-        
+
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr != null)
         {
@@ -121,8 +134,7 @@ public class Player : MonoBehaviour
 
         isInvincible = false;
     }
-    
-    
+
     public void AddCollectible(int amount)
     {
         collectibles += amount;
@@ -132,8 +144,6 @@ public class Player : MonoBehaviour
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        // UpdateHeartsUI(); // <-- Eliminado
-
         Debug.Log("Vida actual: " + currentHealth);
 
         if (currentHealth <= 0)
@@ -160,5 +170,16 @@ public class Player : MonoBehaviour
         Debug.Log("Jugador ha muerto. Reiniciando...");
         transform.position = respawnPoint.position;
         currentHealth = maxHealth;
+    }
+
+    public void Atacando()
+    {
+        atacando = true;
+        rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y);
+    }
+
+    public void NoAtacando()
+    {
+        atacando = false;
     }
 }
