@@ -6,7 +6,7 @@ public class Enemigo : MonoBehaviour
     public float knockbackForce = 15f;
     public float invincibilityTime = 1f; 
 
-    [Header("Patrulla con Puntos")]
+    [Header("Puntos")]
     public Transform pointA; 
     public Transform pointB; 
     public float moveSpeed = 2f;
@@ -25,13 +25,11 @@ public class Enemigo : MonoBehaviour
 
         if (pointA == null || pointB == null)
         {
-            Debug.LogError("¡Configura los Patrol Points A y B en el Inspector! El enemigo no se moverá.");
+            Debug.LogError("No hay puntos");
             enabled = false; 
             return;
         }
 
-        // CORRECCIÓN CLAVE: Fuerza la escala X a ser positiva.
-        // Esto normaliza la dirección "hacia adelante" antes de que comience el movimiento.
         Vector3 localScale = transform.localScale;
         localScale.x = Mathf.Abs(localScale.x);
         transform.localScale = localScale;
