@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
     [HideInInspector] public bool isInvincible = false;
     [HideInInspector] private bool isKnockedBack = false;
+    
 
     [Header("Movimiento")]
     public float speed = 5f;
@@ -15,9 +16,9 @@ public class Player : MonoBehaviour
     private bool atacando;
     private bool isGrounded;
     private float moveInput;
-
     private Rigidbody2D rb2d;
     private Animator anim;
+
 
     [Header("Inventario")]
     public int collectibles = 0;
