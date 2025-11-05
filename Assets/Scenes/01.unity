@@ -4502,6 +4502,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3694803528805277236, guid: f6fa4e63bb36bc44b8a2726503bf91a4, type: 3}
   m_PrefabInstance: {fileID: 1692860885}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &175161382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 1371935232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &241204906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4622,15 +4627,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.354397
+      value: 9.6146965
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.115717
+      value: -10.243787
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4674,13 +4679,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (2)
+      value: EspinasZ2(2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+--- !u!4 &386301747 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 503828730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &389814165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4939,15 +4949,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.158
+      value: 8.418301
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.116
+      value: -10.244069
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4991,7 +5001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas
+      value: EspinasZ2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5004,15 +5014,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.554214
+      value: 10.814514
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.14
+      value: -10.268069
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5056,7 +5066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (4)
+      value: EspinasZ2(4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5331,6 +5341,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3694803528805277236, guid: f6fa4e63bb36bc44b8a2726503bf91a4, type: 3}
   m_PrefabInstance: {fileID: 570871705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &670682206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 300213609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &699214431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 495492508}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &827280676 stripped
 Transform:
@@ -5638,15 +5658,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.765
+      value: 9.025299
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.12
+      value: -10.248071
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5690,7 +5710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (1)
+      value: EspinasZ2(1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5925,6 +5945,14 @@ Transform:
   - {fileID: 1687895081}
   - {fileID: 1849620321}
   - {fileID: 1311349878}
+  - {fileID: 699214431}
+  - {fileID: 1389308241}
+  - {fileID: 670682206}
+  - {fileID: 1984138049}
+  - {fileID: 386301747}
+  - {fileID: 1510771576}
+  - {fileID: 1798022190}
+  - {fileID: 175161382}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1311349877
@@ -6047,15 +6075,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.126602
+      value: 11.386902
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.126724
+      value: -10.254794
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6099,7 +6127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (5)
+      value: EspinasZ2(5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6112,15 +6140,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.27138
+      value: 12.531681
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.148739
+      value: -10.276809
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6168,13 +6196,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (7)
+      value: EspinasZ2(7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+--- !u!4 &1389308241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 1026038467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1394920621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3694803528805277236, guid: f6fa4e63bb36bc44b8a2726503bf91a4, type: 3}
@@ -6283,6 +6316,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76c42c8a913e0d84ea4f0505b95abf1e, type: 3}
+--- !u!4 &1510771576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 1322009995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1520903810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6557,15 +6595,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.721004
+      value: 11.981304
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.126724
+      value: -10.254794
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6609,7 +6647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (6)
+      value: EspinasZ2(6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6797,6 +6835,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6fa4e63bb36bc44b8a2726503bf91a4, type: 3}
+--- !u!4 &1798022190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 1619117920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1813686596
 GameObject:
   m_ObjectHideFlags: 0
@@ -112659,6 +112702,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3694803528805277236, guid: f6fa4e63bb36bc44b8a2726503bf91a4, type: 3}
   m_PrefabInstance: {fileID: 1009888273}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1984138049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
+  m_PrefabInstance: {fileID: 2133890856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2023711648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1914810974599400536, guid: 0171e2dc92da5d842a47ecf4ff91539f, type: 3}
@@ -112885,15 +112933,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1274355727}
     m_Modifications:
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.970818
+      value: 10.231117
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.137732
+      value: -10.265801
       objectReference: {fileID: 0}
     - target: {fileID: 617033330017911553, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_LocalPosition.z
@@ -112937,7 +112985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913284672768970361, guid: e78ef429e57cc794c9b66eb3fb948845, type: 3}
       propertyPath: m_Name
-      value: Espinas (3)
+      value: EspinasZ2(3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -113327,11 +113375,3 @@ SceneRoots:
   - {fileID: 1153642554}
   - {fileID: 518429113}
   - {fileID: 1274355727}
-  - {fileID: 495492508}
-  - {fileID: 1026038467}
-  - {fileID: 300213609}
-  - {fileID: 2133890856}
-  - {fileID: 503828730}
-  - {fileID: 1322009995}
-  - {fileID: 1619117920}
-  - {fileID: 1371935232}
