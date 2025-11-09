@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: d51fbd8655f8eeb48944bb4ed2b39fb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6235570189361001459
+    second: oloroso_0
+  - first:
+      213: 5167986221045307008
+    second: oloroso_1
+  - first:
+      213: -1208948781543641093
+    second: oloroso_2
+  - first:
+      213: 3798954716192390197
+    second: oloroso_3
+  - first:
+      213: 5172259345902853804
+    second: oloroso_4
+  - first:
+      213: 3741220786193391184
+    second: oloroso_5
+  - first:
+      213: 6018262451589453521
+    second: oloroso_6
+  - first:
+      213: -6901433214962320540
+    second: oloroso_7
+  - first:
+      213: 8847601422381531686
+    second: oloroso_8
+  - first:
+      213: 11150225387541554
+    second: oloroso_9
+  - first:
+      213: -7292005235654953821
+    second: oloroso_10
+  - first:
+      213: -7496614477074178828
+    second: oloroso_11
+  - first:
+      213: -6326959534794008934
+    second: oloroso_12
+  - first:
+      213: 2423051975781494145
+    second: oloroso_13
+  - first:
+      213: -5322082601933371515
+    second: oloroso_14
+  - first:
+      213: 2282696952609052259
+    second: oloroso_15
+  - first:
+      213: 1417780536405736098
+    second: oloroso_16
+  - first:
+      213: -913266401801309447
+    second: oloroso_17
+  - first:
+      213: -3977288062854539261
+    second: oloroso_18
+  - first:
+      213: 2069222819593234027
+    second: oloroso_19
+  - first:
+      213: -4986487043547300781
+    second: oloroso_20
+  - first:
+      213: -2449090333010201820
+    second: oloroso_21
+  - first:
+      213: 4866593857728896886
+    second: oloroso_22
+  - first:
+      213: 5946754817182575928
+    second: oloroso_23
+  - first:
+      213: -972849529691572269
+    second: oloroso_24
+  - first:
+      213: -5380936347904189394
+    second: oloroso_25
+  - first:
+      213: -1396164576143413159
+    second: oloroso_26
+  - first:
+      213: -7027299380614208901
+    second: oloroso_27
+  - first:
+      213: 2913828436595555441
+    second: oloroso_28
+  - first:
+      213: -5175357955582033124
+    second: oloroso_29
+  - first:
+      213: 8742126414975014370
+    second: oloroso_30
+  - first:
+      213: 2758902629459778217
+    second: oloroso_31
+  - first:
+      213: -4274517131453801271
+    second: oloroso_32
+  - first:
+      213: 1000020518997743031
+    second: oloroso_33
+  - first:
+      213: 7932233061040125324
+    second: oloroso_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oloroso_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 176
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c4f1343fdc679a0800000000000000
+      internalID: -6235570189361001459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 136
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086d48d361068b740800000000000000
+      internalID: 5167986221045307008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 183
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff237c0d73f83fe0800000000000000
+      internalID: -1208948781543641093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_3
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 180
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c3178cf2998b430800000000000000
+      internalID: 3798954716192390197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 176
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caedbb6a87e87c740800000000000000
+      internalID: 5172259345902853804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 136
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e5d53bb7c7be330800000000000000
+      internalID: 3741220786193391184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 183
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d69f0840d9258350800000000000000
+      internalID: 6018262451589453521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_7
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 180
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bb61d6e0f2930a0800000000000000
+      internalID: -6901433214962320540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 166
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 622ca47fd9ef8ca70800000000000000
+      internalID: 8847601422381531686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 170
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234d367221d972000800000000000000
+      internalID: 11150225387541554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 166
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a47f747fd79dca90800000000000000
+      internalID: -7292005235654953821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 170
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc51f31adca6f790800000000000000
+      internalID: -7496614477074178828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 154
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96155423df1238a0800000000000000
+      internalID: -6326959534794008934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_13
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 154
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18da3c02fe860a120800000000000000
+      internalID: 2423051975781494145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_14
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 118
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5878976321a2426b0800000000000000
+      internalID: -5322082601933371515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 115
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366112eb8c4cdaf10800000000000000
+      internalID: 2282696952609052259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_16
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 115
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa3de9d2e7fca310800000000000000
+      internalID: 1417780536405736098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 75
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f27557db0d6353f0800000000000000
+      internalID: -913266401801309447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 122
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30857245495ddc8c0800000000000000
+      internalID: -3977288062854539261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_19
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 119
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66acf2f03b57bc10800000000000000
+      internalID: 2069222819593234027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 111
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35c764414707ccab0800000000000000
+      internalID: -4986487043547300781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 71
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42375166155130ed0800000000000000
+      internalID: -2449090333010201820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 105
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f570c445d998340800000000000000
+      internalID: 4866593857728896886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_23
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 105
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83da28cbffd178250800000000000000
+      internalID: 5946754817182575928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_24
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 109
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7f3d2d18ebf72f0800000000000000
+      internalID: -972849529691572269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_25
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 101
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cde28a6e21355b0800000000000000
+      internalID: -5380936347904189394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 93
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950fcf617b3df9ce0800000000000000
+      internalID: -1396164576143413159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_27
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 89
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72ea2012740a7e90800000000000000
+      internalID: -7027299380614208901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_28
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 47
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cb5b3668fff6820800000000000000
+      internalID: 2913828436595555441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_29
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 7
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c138a001c5f6d28b0800000000000000
+      internalID: -5175357955582033124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 54
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5152a18a5425970800000000000000
+      internalID: 8742126414975014370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 51
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa57def257994620800000000000000
+      internalID: 2758902629459778217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 37
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ccdf59f05ddda4c0800000000000000
+      internalID: -4274517131453801271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_33
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 41
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b556fa1d59c0ed00800000000000000
+      internalID: 1000020518997743031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso_34
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 25
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85f7e631f3f41e60800000000000000
+      internalID: 7932233061040125324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      oloroso_0: -6235570189361001459
+      oloroso_1: 5167986221045307008
+      oloroso_10: -7292005235654953821
+      oloroso_11: -7496614477074178828
+      oloroso_12: -6326959534794008934
+      oloroso_13: 2423051975781494145
+      oloroso_14: -5322082601933371515
+      oloroso_15: 2282696952609052259
+      oloroso_16: 1417780536405736098
+      oloroso_17: -913266401801309447
+      oloroso_18: -3977288062854539261
+      oloroso_19: 2069222819593234027
+      oloroso_2: -1208948781543641093
+      oloroso_20: -4986487043547300781
+      oloroso_21: -2449090333010201820
+      oloroso_22: 4866593857728896886
+      oloroso_23: 5946754817182575928
+      oloroso_24: -972849529691572269
+      oloroso_25: -5380936347904189394
+      oloroso_26: -1396164576143413159
+      oloroso_27: -7027299380614208901
+      oloroso_28: 2913828436595555441
+      oloroso_29: -5175357955582033124
+      oloroso_3: 3798954716192390197
+      oloroso_30: 8742126414975014370
+      oloroso_31: 2758902629459778217
+      oloroso_32: -4274517131453801271
+      oloroso_33: 1000020518997743031
+      oloroso_34: 7932233061040125324
+      oloroso_4: 5172259345902853804
+      oloroso_5: 3741220786193391184
+      oloroso_6: 6018262451589453521
+      oloroso_7: -6901433214962320540
+      oloroso_8: 8847601422381531686
+      oloroso_9: 11150225387541554
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
