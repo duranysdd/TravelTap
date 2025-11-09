@@ -191,4 +191,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dfb37450edde0429528e1eb085c64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleVida
-  value: 1
+  value: 5
