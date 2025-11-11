@@ -31,15 +31,33 @@ public class Player : MonoBehaviour
     public Transform respawnPoint;
     public Transform nearRespawnPoint;
 
-    private void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        currentHealth = maxHealth;
+   private void Start()
+{
+    rb2d = GetComponent<Rigidbody2D>();
+    anim = GetComponent<Animator>();
 
-        if (respawnPoint == null)
-            respawnPoint = transform;
+    // Restaurar vidas desde el GameManager si existe
+    if (GameManager.instance != null)
+    {
+        maxHealth = GameManager.instance.maxHealth;
+        currentHealth = GameManager.instance.currentHealth;
     }
+    else
+    {
+        currentHealth = maxHealth;
+    }
+
+    if (respawnPoint == null)
+        respawnPoint = transform;
+
+    // Actualizar UI al iniciar
+    if (UIManager.instance != null)
+    {
+        UIManager.instance.UpdateHearts();
+        UIManager.instance.UpdateScore(collectibles);
+    }
+}
+
 
     private void Update()
     {
@@ -139,6 +157,7 @@ public class Player : MonoBehaviour
     public void AddCollectible(int amount)
     {
         collectibles += amount;
+        UIManager.instance.UpdateScore(collectibles);
     }
 
     public void TakeDamage(int amount, bool causeRespawn = false)
@@ -146,6 +165,8 @@ public class Player : MonoBehaviour
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         Debug.Log("Vida actual: " + currentHealth);
+
+        UIManager.instance.UpdatePlayerHealth();
 
         if (currentHealth <= 0)
         {
@@ -164,6 +185,7 @@ public class Player : MonoBehaviour
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        UIManager.instance.UpdatePlayerHealth();
     }
 
     private void Die()
