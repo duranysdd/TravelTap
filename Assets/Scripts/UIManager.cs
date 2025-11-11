@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
     {
         if (player == null || heartsPanel == null) return;
 
-        // Limpiar corazones antiguos
+        // Limpiar corazones antiguo
         foreach (Transform child in heartsPanel)
         {
             Destroy(child.gameObject);
