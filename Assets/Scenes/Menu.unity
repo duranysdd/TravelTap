@@ -1153,7 +1153,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1824239434}
         m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: abrirOpciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1292,6 +1292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e0e8a509c7cd944948466a3be9b45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuSystem
+  MenuPrincipal: {fileID: 0}
+  MenuOpciones: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
