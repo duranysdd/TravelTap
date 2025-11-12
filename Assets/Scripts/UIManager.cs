@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    [System.Obsolete]
     private void Start()
     {
         player = FindObjectOfType<Player>();

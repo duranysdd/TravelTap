@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     public Transform respawnPoint;
     public Transform nearRespawnPoint;
 
-   private void Start()
+    private void Start()
 {
     rb2d = GetComponent<Rigidbody2D>();
     anim = GetComponent<Animator>();
