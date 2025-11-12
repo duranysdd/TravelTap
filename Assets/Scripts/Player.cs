@@ -154,11 +154,19 @@ public class Player : MonoBehaviour
         isInvincible = false;
     }
 
-    public void AddCollectible(int amount)
+  public void AddCollectible(int amount)
+{
+    collectibles += amount;
+
+    if (UIManager.instance != null)
     {
-        collectibles += amount;
         UIManager.instance.UpdateScore(collectibles);
     }
+    else
+    {
+        Debug.LogWarning("UIManager.instance es NULL, no se puede actualizar el marcador.");
+    }
+}
 
     public void TakeDamage(int amount, bool causeRespawn = false)
     {
