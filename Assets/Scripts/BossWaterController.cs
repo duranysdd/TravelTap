@@ -3,44 +3,47 @@ using UnityEngine;
 public class BossWaterController : MonoBehaviour
 {
     [Header("Ataque")]
-    public GameObject waterAttackPrefab; // Prefab del ataque de agua sucia
-    public Transform attackPoint;        // Punto desde donde dispara
-    public float attackInterval = 2f;    // Intervalo entre ataques
+    public GameObject waterAttackPrefab; 
+    public Transform attackPoint;
+    public float attackInterval = 3f;
     private bool isAttacking = false;
 
     [Header("Movimiento")]
-    public Transform player;             // Jugador (watersito)
-    public float moveSpeed = 2f;         // Velocidad del boss
-    public float stopDistance = 4f;      // Distancia mínima para dejar de moverse
+    public Transform player;
+    public float moveSpeed = 1.2f;
+    public float stopDistance = 5f;
 
     void Update()
     {
         if (player == null) return;
 
-        // Movimiento hacia el jugador
         float distance = Vector2.Distance(transform.position, player.position);
 
+        // Movimiento hacia el jugador
         if (distance > stopDistance)
         {
-            // Mover hacia el jugador
-            Vector2 direction = (player.position - transform.position).normalized;
-            transform.position += (Vector3)(direction * moveSpeed * Time.deltaTime);
+            Vector2 newPos = Vector2.Lerp(
+                transform.position, 
+                player.position, 
+                moveSpeed * Time.deltaTime
+            );
+
+            transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
         }
 
-        // Girar sprite según la dirección
+        // Mirar hacia el jugador
         if (player.position.x > transform.position.x)
-            transform.localScale = new Vector3(1, 1, 1);  // mirando a la derecha
+            transform.localScale = new Vector3(1, 1, 1);
         else
-            transform.localScale = new Vector3(-1, 1, 1); // mirando a la izquierda
+            transform.localScale = new Vector3(-1, 1, 1);
     }
 
-    // Llamado desde BossTrigger al entrar en la zona
     public void StartAttacking()
     {
         if (!isAttacking)
         {
             isAttacking = true;
-            InvokeRepeating(nameof(Attack), 1f, attackInterval);
+            InvokeRepeating(nameof(Attack), 1.5f, attackInterval);
         }
     }
 
@@ -52,13 +55,13 @@ public class BossWaterController : MonoBehaviour
 
     private void Attack()
     {
-        if (waterAttackPrefab != null && attackPoint != null)
+        if (waterAttackPrefab == null || attackPoint == null)
         {
-            Instantiate(waterAttackPrefab, attackPoint.position, attackPoint.rotation);
+            Debug.LogWarning("⚠️ Asigna 'waterAttackPrefab' y 'attackPoint'");
+            return;
         }
-        else
-        {
-            Debug.LogWarning("⚠️ Falta asignar 'waterAttackPrefab' o 'attackPoint' en el boss.");
-        }
+
+        // Instanciar la bola de agua
+        Instantiate(waterAttackPrefab, attackPoint.position, Quaternion.identity);
     }
 }

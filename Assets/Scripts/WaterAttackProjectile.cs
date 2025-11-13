@@ -2,21 +2,26 @@ using UnityEngine;
 
 public class WaterAttackProjectile : MonoBehaviour
 {
-   public float speed = 2f;            // Velocidad lenta
-    public int damage = 1;              // Daño al jugador
-    public float lifeTime = 5f;         // Desaparece después de unos segundos
+    public float speed = 4f;      
+    public int damage = 1;
+    public float lifeTime = 5f;
 
-    private Vector3 direction;
+    private Transform target;
 
     void Start()
     {
-        // El ataque se mueve hacia la izquierda (ajústalo según tu juego)
-        direction = Vector3.left; 
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        // Destruir después de un tiempo
         Destroy(gameObject, lifeTime);
     }
 
     void Update()
     {
+        if (target == null) return;
+
+        Vector3 direction = (target.position - transform.position).normalized;
+
         transform.position += direction * speed * Time.deltaTime;
     }
 
@@ -25,13 +30,10 @@ public class WaterAttackProjectile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Player watersito = other.GetComponent<Player>();
-
             if (watersito != null)
-            {
                 watersito.TakeDamage(damage);
-            }
 
-            Destroy(gameObject); // El ataque desaparece al golpear
+            Destroy(gameObject);
         }
     }
 }
