@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8731153558287231391}
   - component: {fileID: 1164930771762523228}
   - component: {fileID: 4977811406936678901}
-  - component: {fileID: 1757530035418230365}
+  - component: {fileID: 1875445977409215317}
+  - component: {fileID: 5480354881836537253}
   m_Layer: 0
   m_Name: WaterAttack
   m_TagString: Untagged
@@ -119,8 +120,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1757530035418230365
-BoxCollider2D:
+--- !u!58 &1875445977409215317
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -149,19 +150,24 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.74, y: 4.96}
-    newSize: {x: 5.74, y: 4.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 5.74, y: 4.96}
-  m_EdgeRadius: 0
+  m_Radius: 2.87
+--- !u!114 &5480354881836537253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471777830551155599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ac4ef122a6c4442a31370714575ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterAttackProjectile
+  speed: 5
+  damage: 1
+  lifeTime: 5
