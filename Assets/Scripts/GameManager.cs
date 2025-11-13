@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded; // ✅ suscribirse al evento
         }
         else
         {
@@ -30,6 +31,18 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // ✅ Al cargar cada escena, restaurar salud completa y avisar al HeartsUI
+        currentHealth = maxHealth;
+
+        var heartsUI = FindObjectOfType<HeartsUI>();
+        if (heartsUI != null)
+        {
+            heartsUI.UpdateHearts(); // actualiza los corazones en el nuevo nivel
+        }
     }
 
     public void AddCollectible()
