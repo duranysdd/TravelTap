@@ -1,0 +1,18 @@
+# Normaliza los finales de línea
+* text=auto
+
+# Archivos de Unity
+*.cs text eol=lf
+*.shader text eol=lf
+*.meta text eol=lf
+*.unity text eol=lf
+*.prefab text eol=lf
+
+# Archivos binarios (no tocar finales de línea)
+*.png binary
+*.jpg binary
+*.fbx binary
+*.psd binary
+*.wav binary
+*.mp3 binary
+*.dll binary
