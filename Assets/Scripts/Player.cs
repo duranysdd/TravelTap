@@ -5,7 +5,6 @@ public class Player : MonoBehaviour
 {
     [HideInInspector] public bool isInvincible = false;
     [HideInInspector] private bool isKnockedBack = false;
-    
 
     [Header("Movimiento")]
     public float speed = 5f;
@@ -19,55 +18,33 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator anim;
 
-
-    [Header("Inventario")]
-    public int collectibles = 0;
-
-    [Header("Vida del jugador")]
-    public int maxHealth = 5;
-    public int currentHealth;
-
     [Header("Respawn")]
     public Transform respawnPoint;
     public Transform nearRespawnPoint;
 
     private void Start()
-{
-    rb2d = GetComponent<Rigidbody2D>();
-    anim = GetComponent<Animator>();
-
-    // Restaurar vidas desde el GameManager si existe
-    if (GameManager.instance != null)
     {
-        maxHealth = GameManager.instance.maxHealth;
-        currentHealth = GameManager.instance.currentHealth;
-    }
-    else
-    {
-        currentHealth = maxHealth;
-    }
+        rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
-    if (respawnPoint == null)
-        respawnPoint = transform;
+        if (respawnPoint == null)
+            respawnPoint = transform;
 
-    // Actualizar UI al iniciar
-    if (UIManager.instance != null)
-    {
-        UIManager.instance.UpdateHearts();
-        UIManager.instance.UpdateScore(collectibles);
+        // Actualiza UI al iniciar
+        if (UIManager.instance != null)
+        {
+            UIManager.instance.UpdateHearts();
+            UIManager.instance.UpdateScore();
+        }
     }
-}
-
 
     private void Update()
     {
-        if (isKnockedBack)
-            return;
+        if (isKnockedBack) return;
 
-        if (!atacando)
-            movimientos();
+        if (!atacando) Movimientos();
 
-        animaciones();
+        Animaciones();
     }
 
     private void FixedUpdate()
@@ -75,7 +52,7 @@ public class Player : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, graundLayer);
     }
 
-    public void movimientos()
+    public void Movimientos()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
 
@@ -100,7 +77,7 @@ public class Player : MonoBehaviour
             Atacando();
     }
 
-    public void animaciones()
+    public void Animaciones()
     {
         anim.SetFloat("walk", Mathf.Abs(moveInput));
         anim.SetBool("Atacando", atacando);
@@ -154,21 +131,20 @@ public class Player : MonoBehaviour
         isInvincible = false;
     }
 
-    public void AddCollectible(int amount)
+    // Contador de Items que ahora esta en el GameManager
+    public void AddCollectible(int amount = 1)
     {
-        collectibles += amount;
-        UIManager.instance.UpdateScore(collectibles);
+        GameManager.instance.AgregarColeccionable(amount);
     }
 
+    // Contador-Vidas que ahora esta en  el GameManager
     public void TakeDamage(int amount, bool causeRespawn = false)
     {
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        Debug.Log("Vida actual: " + currentHealth);
+        if (isInvincible) return;
 
-        UIManager.instance.UpdatePlayerHealth();
+        bool dead = GameManager.instance.TomarDaño(amount);
 
-        if (currentHealth <= 0)
+        if (dead)
         {
             Die();
         }
@@ -183,16 +159,18 @@ public class Player : MonoBehaviour
 
     public void Heal(int amount)
     {
-        currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UIManager.instance.UpdatePlayerHealth();
+        GameManager.instance.Curar(amount);
     }
 
     private void Die()
     {
-        Debug.Log("Jugador ha muerto. Reiniciando...");
+        Debug.Log("Te moriste wey jaja");
         transform.position = respawnPoint.position;
-        currentHealth = maxHealth;
+
+        // Si todo va bien se restaura la vida si se muere
+        GameManager.instance.vidasActuales = GameManager.instance.maxVidas;
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateHearts();
     }
 
     public void Atacando()

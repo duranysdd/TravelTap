@@ -5,94 +5,126 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Progreso general")]
-    public int currentLevel = 1;
-    public int collectiblesCollected = 0;
-    public int totalCollectibles = 20;
+    public int coleccionables = 0; 
+    public int coleccionablesNecesarios = 20; 
 
-    [Header("Vidas del jugador")]
-    public int maxHealth = 3;
-    public int currentHealth;
+    public int maxVidas = 3; 
+    public int vidasActuales; 
+    public int maxVidasLimit = 5; 
 
     private void Awake()
     {
+        // Singleton persistente
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded; // ✅ suscribirse al evento
+
+            // Inicialización sólo la primera vez que se crea el GameManager
+            vidasActuales = maxVidas;
+            coleccionables = 0;
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
-    private void Start()
+    public void AgregarColeccionable(int amount = 1)
     {
-        currentHealth = maxHealth;
-    }
+        coleccionables += amount;
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // ✅ Al cargar cada escena, restaurar salud completa y avisar al HeartsUI
-        currentHealth = maxHealth;
-
-        var heartsUI = FindObjectOfType<HeartsUI>();
-        if (heartsUI != null)
+        // Si se alcanzan los coleccionables necesarios, aumenta vida máxima (si aplica)
+        if (coleccionables >= coleccionablesNecesarios)
         {
-            heartsUI.UpdateHearts(); // actualiza los corazones en el nuevo nivel
+            coleccionables = 0;
+            AumentarVidaMaxima();
         }
+
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateScore();
     }
-
-    public void AddCollectible()
+    private void AumentarVidaMaxima()
     {
-        collectiblesCollected++;
-        Debug.Log($"Coleccionables: {collectiblesCollected}/{totalCollectibles}");
-
-        if (collectiblesCollected >= totalCollectibles)
+        if (maxVidas < maxVidasLimit)
         {
-            PlayerCompletedLevelWithAllItems();
+            maxVidas++;
+            vidasActuales = maxVidas;
         }
+
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateHearts();
+    }
+    public bool TomarDaño(int amount)
+    {
+        vidasActuales -= amount;
+        vidasActuales = Mathf.Clamp(vidasActuales, 0, maxVidas);
+
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateHearts();
+
+        // Retorna true si el jugador murió
+        return vidasActuales <= 0;
     }
 
-    private void PlayerCompletedLevelWithAllItems()
+    // Contador de Vidas
+    public void Curar(int amount)
     {
-        Debug.Log("🎉 Nivel completado con todos los coleccionables. +1 vida máxima!");
-        maxHealth++;
-        currentHealth = maxHealth;
-        collectiblesCollected = 0;
-        GoToNextLevel();
+        vidasActuales += amount;
+        vidasActuales = Mathf.Clamp(vidasActuales, 0, maxVidas);
+
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateHearts();
     }
 
-    public void PlayerCompletedLevelWithoutAllItems()
+    // Contador de Items
+    public void ResetearColeccionables()
     {
-        Debug.Log("Nivel completado, pero sin todos los ítems. Conserva vidas actuales.");
-        collectiblesCollected = 0;
-        GoToNextLevel();
+        coleccionables = 0;
+
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateScore();
     }
 
-    private void GoToNextLevel()
+    // usa coleccionables actuales para decidir
+    public void CompletarNivel()
     {
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        if (coleccionables >= coleccionablesNecesarios)
         {
-            currentLevel++;
-            SceneManager.LoadScene(nextSceneIndex);
+            // Ya no lo vamos a manejar por AddCollectible (por seguridac)
+            coleccionables = 0;
+            AumentarVidaMaxima();
         }
         else
         {
-            Debug.Log("🎮 ¡Has completado todos los niveles!");
+            // Esta madre es por si no obtuvo los items
+            coleccionables = 0;
+            if (UIManager.instance != null)
+                UIManager.instance.UpdateScore();
+        }
+
+        // Avanza la  escena
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextScene < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextScene);
+        }
+        else
+        {
             SceneManager.LoadScene("MainMenu");
         }
     }
 
+    // Reinicia todo el progreso 
     public void ResetProgress()
     {
-        currentLevel = 1;
-        maxHealth = 3;
-        currentHealth = maxHealth;
-        collectiblesCollected = 0;
+        coleccionables = 0;
+        maxVidas = 3;
+        vidasActuales = maxVidas;
+
+        if (UIManager.instance != null)
+        {
+            UIManager.instance.UpdateScore();
+            UIManager.instance.UpdateHearts();
+        }
     }
 }

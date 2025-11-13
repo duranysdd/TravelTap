@@ -6,65 +6,59 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    [Header("Referencias UI")]
+    [Header("Score")]
     public TextMeshProUGUI scoreText;
-    public Transform heartsPanel;
-    public GameObject heartPrefab; // usaremos esto para crear corazones dinámicamente
 
-    private Player player;
+    [Header("Hearts UI")]
+    public Image[] corazones; //Esta madre es donde se pone el maximo de corazones
+    public Sprite spriteLleno;
+    public Sprite spriteVacio;
 
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
-    [System.Obsolete]
     private void Start()
     {
-        player = FindObjectOfType<Player>();
-        UpdateScore(player.collectibles);
+        UpdateScore();
         UpdateHearts();
     }
 
-    public void UpdateScore(int newScore)
+    // Aca se ceuntan los items
+    public void UpdateScore()
     {
-        if (scoreText != null)
-            scoreText.text = "Score: " + newScore.ToString();
+        if (scoreText == null || GameManager.instance == null) return;
+        scoreText.text = $"{GameManager.instance.coleccionables}/{GameManager.instance.coleccionablesNecesarios}";
     }
 
+    // Aca se cuentan las vidas
     public void UpdateHearts()
     {
-        if (player == null || heartsPanel == null) return;
+        if (GameManager.instance == null || corazones == null) return;
 
-        // Limpiar corazones antiguo
-        foreach (Transform child in heartsPanel)
+        int maxVidas = GameManager.instance.maxVidas;
+        int vidasActuales = GameManager.instance.vidasActuales;
+
+        // Corazones según maximo de vidas
+        for (int i = 0; i < corazones.Length; i++)
         {
-            Destroy(child.gameObject);
-        }
-
-        // Crear nuevos corazones según la vida máxima
-        for (int i = 0; i < player.maxHealth; i++)
-        {
-            GameObject heart = Instantiate(heartPrefab, heartsPanel);
-            Image img = heart.GetComponent<Image>();
-
-            // Si la vida actual es menor, hacerlo más transparente
-            if (i >= player.currentHealth)
+            if (i < maxVidas)
             {
-                Color c = img.color;
-                c.a = 0.3f; // transparente
-                img.color = c;
+                corazones[i].gameObject.SetActive(true);
+
+                // lleno o vacío según vidas actuales
+                if (i < vidasActuales)
+                    corazones[i].sprite = spriteLleno;
+                else
+                    corazones[i].sprite = spriteVacio;
+            }
+            else
+            {
+                // si la UI tiene más ranuras que el max actual se acumulan 
+                corazones[i].gameObject.SetActive(false);
             }
         }
     }
-
-    public void UpdatePlayerHealth()
-    {
-        UpdateHearts();
-    }
-   
-
 }
