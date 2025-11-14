@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "TravelTap.sln"
+    "dotnet.defaultSolution": "TravelTap_v1.sln"
 }
