@@ -170,4 +170,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaterAttackProjectile
   speed: 5
   damage: 1
-  lifeTime: 5
+  lifetime: 5

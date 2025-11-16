@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Collectible
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1925829073
     locked: 0
   m_RenderingLayers:
   - Default
