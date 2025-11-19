@@ -1,112 +1,112 @@
 fileFormatVersion: 2
-guid: d51fbd8655f8eeb48944bb4ed2b39fb4
+guid: 0c0ab6780e966eb43a6de7baec834d78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6235570189361001459
-    second: oloroso_0
+      213: -4578049904311919622
+    second: oloroso redimension_0
   - first:
-      213: 5167986221045307008
-    second: oloroso_1
+      213: 8386225034867886465
+    second: oloroso redimension_1
   - first:
-      213: -1208948781543641093
-    second: oloroso_2
+      213: -5993360151064313083
+    second: oloroso redimension_2
   - first:
-      213: 3798954716192390197
-    second: oloroso_3
+      213: -3559583207867077428
+    second: oloroso redimension_3
   - first:
-      213: 5172259345902853804
-    second: oloroso_4
+      213: 6612412651997681237
+    second: oloroso redimension_4
   - first:
-      213: 3741220786193391184
-    second: oloroso_5
+      213: 1704482680985584441
+    second: oloroso redimension_5
   - first:
-      213: 6018262451589453521
-    second: oloroso_6
+      213: 78046338949657270
+    second: oloroso redimension_6
   - first:
-      213: -6901433214962320540
-    second: oloroso_7
+      213: -869687056901994114
+    second: oloroso redimension_7
   - first:
-      213: 8847601422381531686
-    second: oloroso_8
+      213: -8790337661217082519
+    second: oloroso redimension_8
   - first:
-      213: 11150225387541554
-    second: oloroso_9
+      213: 6124458920217915191
+    second: oloroso redimension_9
   - first:
-      213: -7292005235654953821
-    second: oloroso_10
+      213: 6616942934245199046
+    second: oloroso redimension_10
   - first:
-      213: -7496614477074178828
-    second: oloroso_11
+      213: 6353704451331969810
+    second: oloroso redimension_11
   - first:
-      213: -6326959534794008934
-    second: oloroso_12
+      213: 4709515572101303440
+    second: oloroso redimension_12
   - first:
-      213: 2423051975781494145
-    second: oloroso_13
+      213: -6007990834056988252
+    second: oloroso redimension_13
   - first:
-      213: -5322082601933371515
-    second: oloroso_14
+      213: -8013402620181329637
+    second: oloroso redimension_14
   - first:
-      213: 2282696952609052259
-    second: oloroso_15
+      213: -8017852145019270834
+    second: oloroso redimension_15
   - first:
-      213: 1417780536405736098
-    second: oloroso_16
+      213: 1336052493389847762
+    second: oloroso redimension_16
   - first:
-      213: -913266401801309447
-    second: oloroso_17
+      213: -2931110069178280989
+    second: oloroso redimension_17
   - first:
-      213: -3977288062854539261
-    second: oloroso_18
+      213: -2809658329240737649
+    second: oloroso redimension_18
   - first:
-      213: 2069222819593234027
-    second: oloroso_19
+      213: -8053170468042949704
+    second: oloroso redimension_19
   - first:
-      213: -4986487043547300781
-    second: oloroso_20
+      213: 6089927581796922693
+    second: oloroso redimension_20
   - first:
-      213: -2449090333010201820
-    second: oloroso_21
+      213: 7794981757176627869
+    second: oloroso redimension_21
   - first:
-      213: 4866593857728896886
-    second: oloroso_22
+      213: -1554882170617580660
+    second: oloroso redimension_22
   - first:
-      213: 5946754817182575928
-    second: oloroso_23
+      213: 819216171393956307
+    second: oloroso redimension_23
   - first:
-      213: -972849529691572269
-    second: oloroso_24
+      213: 205264086400913140
+    second: oloroso redimension_24
   - first:
-      213: -5380936347904189394
-    second: oloroso_25
+      213: -7204710183706535127
+    second: oloroso redimension_25
   - first:
-      213: -1396164576143413159
-    second: oloroso_26
+      213: -237379270407482165
+    second: oloroso redimension_26
   - first:
-      213: -7027299380614208901
-    second: oloroso_27
+      213: -7411133125223425722
+    second: oloroso redimension_27
   - first:
-      213: 2913828436595555441
-    second: oloroso_28
+      213: 8843997233716669417
+    second: oloroso redimension_28
   - first:
-      213: -5175357955582033124
-    second: oloroso_29
+      213: -909269592946926404
+    second: oloroso redimension_29
   - first:
-      213: 8742126414975014370
-    second: oloroso_30
+      213: 5742358957991677121
+    second: oloroso redimension_30
   - first:
-      213: 2758902629459778217
-    second: oloroso_31
+      213: 7719997373123901457
+    second: oloroso redimension_31
   - first:
-      213: -4274517131453801271
-    second: oloroso_32
+      213: -1989750896526048586
+    second: oloroso redimension_32
   - first:
-      213: 1000020518997743031
-    second: oloroso_33
+      213: -1007477626526139222
+    second: oloroso redimension_33
   - first:
-      213: 7932233061040125324
-    second: oloroso_34
+      213: -1443530493313280408
+    second: oloroso redimension_34
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -153,7 +153,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -241,13 +241,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oloroso_0
+      name: oloroso redimension_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 176
-        width: 9
-        height: 9
+        x: 544
+        y: 4717
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0c4f1343fdc679a0800000000000000
-      internalID: -6235570189361001459
+      spriteID: afb1a791edf7770c0800000000000000
+      internalID: -4578049904311919622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_1
+      name: oloroso redimension_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 136
-        width: 45
-        height: 49
+        x: 599
+        y: 4155
+        width: 606
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 086d48d361068b740800000000000000
-      internalID: 5167986221045307008
+      spriteID: 189c9c1bc3bd16470800000000000000
+      internalID: 8386225034867886465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_2
+      name: oloroso redimension_2
       rect:
         serializedVersion: 2
-        x: 14
-        y: 183
-        width: 9
-        height: 9
+        x: 656
+        y: 4814
+        width: 103
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bff237c0d73f83fe0800000000000000
-      internalID: -1208948781543641093
+      spriteID: 50384d062be43dca0800000000000000
+      internalID: -5993360151064313083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_3
+      name: oloroso redimension_3
       rect:
         serializedVersion: 2
-        x: 41
-        y: 180
-        width: 10
-        height: 9
+        x: 1035
+        y: 4772
+        width: 115
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +322,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53c3178cf2998b430800000000000000
-      internalID: 3798954716192390197
+      spriteID: ccc23a29ee1d99ec0800000000000000
+      internalID: -3559583207867077428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_4
+      name: oloroso redimension_4
       rect:
         serializedVersion: 2
-        x: 74
-        y: 176
-        width: 9
-        height: 9
+        x: 2392
+        y: 4717
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +344,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caedbb6a87e87c740800000000000000
-      internalID: 5172259345902853804
+      spriteID: 556de9ed54204cb50800000000000000
+      internalID: 6612412651997681237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_5
+      name: oloroso redimension_5
       rect:
         serializedVersion: 2
-        x: 78
-        y: 136
-        width: 45
-        height: 49
+        x: 2447
+        y: 4155
+        width: 607
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,20 +366,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05e5d53bb7c7be330800000000000000
-      internalID: 3741220786193391184
+      spriteID: 93383f5b7f987a710800000000000000
+      internalID: 1704482680985584441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_6
+      name: oloroso redimension_6
       rect:
         serializedVersion: 2
-        x: 82
-        y: 183
-        width: 9
-        height: 9
+        x: 2505
+        y: 4814
+        width: 102
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,20 +388,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d69f0840d9258350800000000000000
-      internalID: 6018262451589453521
+      spriteID: 6b23d155bb6451100800000000000000
+      internalID: 78046338949657270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_7
+      name: oloroso redimension_7
       rect:
         serializedVersion: 2
-        x: 109
-        y: 180
-        width: 10
-        height: 9
+        x: 2883
+        y: 4772
+        width: 115
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46bb61d6e0f2930a0800000000000000
-      internalID: -6901433214962320540
+      spriteID: e790a93ca304ee3f0800000000000000
+      internalID: -869687056901994114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_8
+      name: oloroso redimension_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 166
-        width: 7
-        height: 7
+        x: 515
+        y: 4575
+        width: 76
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,20 +432,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 622ca47fd9ef8ca70800000000000000
-      internalID: 8847601422381531686
+      spriteID: 963fa676872720680800000000000000
+      internalID: -8790337661217082519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_9
+      name: oloroso redimension_9
       rect:
         serializedVersion: 2
-        x: 53
-        y: 170
-        width: 10
-        height: 12
+        x: 1203
+        y: 4633
+        width: 115
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,20 +454,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 234d367221d972000800000000000000
-      internalID: 11150225387541554
+      spriteID: 73faf0d60f27ef450800000000000000
+      internalID: 6124458920217915191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_10
+      name: oloroso redimension_10
       rect:
         serializedVersion: 2
-        x: 72
-        y: 166
-        width: 7
-        height: 7
+        x: 2363
+        y: 4575
+        width: 76
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,20 +476,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a47f747fd79dca90800000000000000
-      internalID: -7292005235654953821
+      spriteID: 6cc47b66a8a14db50800000000000000
+      internalID: 6616942934245199046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_11
+      name: oloroso redimension_11
       rect:
         serializedVersion: 2
-        x: 121
-        y: 170
-        width: 7
-        height: 12
+        x: 3051
+        y: 4633
+        width: 87
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,20 +498,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fc51f31adca6f790800000000000000
-      internalID: -7496614477074178828
+      spriteID: 213d57df884ec2850800000000000000
+      internalID: 6353704451331969810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_12
+      name: oloroso redimension_12
       rect:
         serializedVersion: 2
-        x: 53
-        y: 154
-        width: 8
-        height: 8
+        x: 1203
+        y: 4407
+        width: 86
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,20 +520,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a96155423df1238a0800000000000000
-      internalID: -6326959534794008934
+      spriteID: 09cc443f57f8b5140800000000000000
+      internalID: 4709515572101303440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_13
+      name: oloroso redimension_13
       rect:
         serializedVersion: 2
-        x: 121
-        y: 154
-        width: 7
-        height: 8
+        x: 3051
+        y: 4407
+        width: 87
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,20 +542,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18da3c02fe860a120800000000000000
-      internalID: 2423051975781494145
+      spriteID: 4a9fa3a0b245f9ca0800000000000000
+      internalID: -6007990834056988252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_14
+      name: oloroso redimension_14
       rect:
         serializedVersion: 2
-        x: 12
-        y: 118
-        width: 9
-        height: 9
+        x: 628
+        y: 3008
+        width: 102
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,20 +564,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5878976321a2426b0800000000000000
-      internalID: -5322082601933371515
+      spriteID: b1948e516ccaac090800000000000000
+      internalID: -8013402620181329637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_15
+      name: oloroso redimension_15
       rect:
         serializedVersion: 2
-        x: 39
-        y: 115
-        width: 10
-        height: 9
+        x: 1006
+        y: 2966
+        width: 115
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,20 +586,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 366112eb8c4cdaf10800000000000000
-      internalID: 2282696952609052259
+      spriteID: e49c58a54fddab090800000000000000
+      internalID: -8017852145019270834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_16
+      name: oloroso redimension_16
       rect:
         serializedVersion: 2
-        x: 67
-        y: 115
-        width: 9
-        height: 9
+        x: 2295
+        y: 2966
+        width: 102
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,20 +608,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2aa3de9d2e7fca310800000000000000
-      internalID: 1417780536405736098
+      spriteID: 2dcd6cdf9ac9a8210800000000000000
+      internalID: 1336052493389847762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_17
+      name: oloroso redimension_17
       rect:
         serializedVersion: 2
-        x: 71
-        y: 75
-        width: 45
-        height: 49
+        x: 2350
+        y: 2407
+        width: 606
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,20 +630,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f27557db0d6353f0800000000000000
-      internalID: -913266401801309447
+      spriteID: 3e3de09fbea9257d0800000000000000
+      internalID: -2931110069178280989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_18
+      name: oloroso redimension_18
       rect:
         serializedVersion: 2
-        x: 75
-        y: 122
-        width: 9
-        height: 7
+        x: 2405
+        y: 3063
+        width: 102
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,20 +652,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30857245495ddc8c0800000000000000
-      internalID: -3977288062854539261
+      spriteID: f886361c2a61209d0800000000000000
+      internalID: -2809658329240737649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_19
+      name: oloroso redimension_19
       rect:
         serializedVersion: 2
-        x: 102
-        y: 119
-        width: 10
-        height: 9
+        x: 2783
+        y: 3021
+        width: 118
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -674,20 +674,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b66acf2f03b57bc10800000000000000
-      internalID: 2069222819593234027
+      spriteID: 8bb32a870246d3090800000000000000
+      internalID: -8053170468042949704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_20
+      name: oloroso redimension_20
       rect:
         serializedVersion: 2
-        x: 4
-        y: 111
-        width: 9
-        height: 9
+        x: 515
+        y: 2911
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -696,20 +696,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35c764414707ccab0800000000000000
-      internalID: -4986487043547300781
+      spriteID: 545fbdcaed4c38450800000000000000
+      internalID: 6089927581796922693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_21
+      name: oloroso redimension_21
       rect:
         serializedVersion: 2
-        x: 8
-        y: 71
-        width: 45
-        height: 49
+        x: 572
+        y: 2349
+        width: 607
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -718,20 +718,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42375166155130ed0800000000000000
-      internalID: -2449090333010201820
+      spriteID: d92c92bcb965d2c60800000000000000
+      internalID: 7794981757176627869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_22
+      name: oloroso redimension_22
       rect:
         serializedVersion: 2
-        x: 51
-        y: 105
-        width: 8
-        height: 12
+        x: 1174
+        y: 2827
+        width: 89
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -740,20 +740,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67f570c445d998340800000000000000
-      internalID: 4866593857728896886
+      spriteID: c8330c867e2fb6ae0800000000000000
+      internalID: -1554882170617580660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_23
+      name: oloroso redimension_23
       rect:
         serializedVersion: 2
-        x: 65
-        y: 105
-        width: 7
-        height: 7
+        x: 2951
+        y: 2882
+        width: 89
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,20 +762,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83da28cbffd178250800000000000000
-      internalID: 5946754817182575928
+      spriteID: 3d9313a74c07e5b00800000000000000
+      internalID: 819216171393956307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_24
+      name: oloroso redimension_24
       rect:
         serializedVersion: 2
-        x: 114
-        y: 109
-        width: 8
-        height: 12
+        x: 488
+        y: 2769
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -784,20 +784,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d7f3d2d18ebf72f0800000000000000
-      internalID: -972849529691572269
+      spriteID: 4fe421b599e39d200800000000000000
+      internalID: 205264086400913140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_25
+      name: oloroso redimension_25
       rect:
         serializedVersion: 2
-        x: 2
-        y: 101
-        width: 7
-        height: 7
+        x: 2266
+        y: 2827
+        width: 73
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -806,20 +806,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2cde28a6e21355b0800000000000000
-      internalID: -5380936347904189394
+      spriteID: 92b5886924ab30c90800000000000000
+      internalID: -7204710183706535127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_26
+      name: oloroso redimension_26
       rect:
         serializedVersion: 2
-        x: 114
-        y: 93
-        width: 8
-        height: 8
+        x: 1174
+        y: 2601
+        width: 89
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -828,20 +828,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 950fcf617b3df9ce0800000000000000
-      internalID: -1396164576143413159
+      spriteID: bc4125eafc8a4bcf0800000000000000
+      internalID: -237379270407482165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_27
+      name: oloroso redimension_27
       rect:
         serializedVersion: 2
-        x: 51
-        y: 89
-        width: 8
-        height: 8
+        x: 2951
+        y: 2659
+        width: 89
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,20 +850,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b72ea2012740a7e90800000000000000
-      internalID: -7027299380614208901
+      spriteID: 6495def30bd562990800000000000000
+      internalID: -7411133125223425722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_28
+      name: oloroso redimension_28
       rect:
         serializedVersion: 2
-        x: 7
-        y: 47
-        width: 9
-        height: 9
+        x: 557
+        y: 1118
+        width: 102
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,20 +872,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17cb5b3668fff6820800000000000000
-      internalID: 2913828436595555441
+      spriteID: 9eb283660a03cba70800000000000000
+      internalID: 8843997233716669417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_29
+      name: oloroso redimension_29
       rect:
         serializedVersion: 2
-        x: 11
-        y: 7
-        width: 45
-        height: 49
+        x: 614
+        y: 559
+        width: 607
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -894,20 +894,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c138a001c5f6d28b0800000000000000
-      internalID: -5175357955582033124
+      spriteID: cbc955b6f10a163f0800000000000000
+      internalID: -909269592946926404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_30
+      name: oloroso redimension_30
       rect:
         serializedVersion: 2
-        x: 15
-        y: 54
-        width: 9
-        height: 7
+        x: 670
+        y: 1215
+        width: 102
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,20 +916,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e5152a18a5425970800000000000000
-      internalID: 8742126414975014370
+      spriteID: 1cc40e74c05f0bf40800000000000000
+      internalID: 5742358957991677121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_31
+      name: oloroso redimension_31
       rect:
         serializedVersion: 2
-        x: 42
-        y: 51
-        width: 10
-        height: 9
+        x: 1048
+        y: 1173
+        width: 115
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -938,20 +938,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9aa57def257994620800000000000000
-      internalID: 2758902629459778217
+      spriteID: 118bff365b0f22b60800000000000000
+      internalID: 7719997373123901457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_32
+      name: oloroso redimension_32
       rect:
         serializedVersion: 2
-        x: 5
-        y: 37
-        width: 7
-        height: 7
+        x: 530
+        y: 979
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -960,20 +960,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ccdf59f05ddda4c0800000000000000
-      internalID: -4274517131453801271
+      spriteID: 6b2cc0d0a1cf264e0800000000000000
+      internalID: -1989750896526048586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_33
+      name: oloroso redimension_33
       rect:
         serializedVersion: 2
-        x: 54
-        y: 41
-        width: 8
-        height: 12
+        x: 1216
+        y: 1034
+        width: 89
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,20 +982,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b556fa1d59c0ed00800000000000000
-      internalID: 1000020518997743031
+      spriteID: aac71cfbf68b402f0800000000000000
+      internalID: -1007477626526139222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oloroso_34
+      name: oloroso redimension_34
       rect:
         serializedVersion: 2
-        x: 54
-        y: 25
-        width: 8
-        height: 8
+        x: 1216
+        y: 811
+        width: 89
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1004,8 +1004,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c85f7e631f3f41e60800000000000000
-      internalID: 7932233061040125324
+      spriteID: 8661e9b1aac87fbe0800000000000000
+      internalID: -1443530493313280408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso redimension_v1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 4113
+        width: 906
+        height: 886
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8abb0e0e77bdc46958e412bac07e36
+      internalID: 2056410338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso redimension_v2
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 4058
+        width: 955
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd92a19458a966d4e8283346ab11790f
+      internalID: -678715350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso redimension_v3
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2252
+        width: 962
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12735b30dc88d34086487d22b8963df
+      internalID: 1307288564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso redimension_v4
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 2294
+        width: 990
+        height: 983
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e987f192e3cf14cab06c547ef95a85
+      internalID: 1534921306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oloroso redimension_v5
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 419
+        width: 955
+        height: 1081
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75ec4b05699eb545b628f9b5d4a472f
+      internalID: 497084592
       vertices: []
       indices: 
       edges: []
@@ -1014,7 +1124,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9b6b22b0253c8524ca474c19289639f4
     internalID: 0
     vertices: []
     indices: 
@@ -1022,43 +1132,52 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":1.0,"y":1.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      oloroso_0: -6235570189361001459
-      oloroso_1: 5167986221045307008
-      oloroso_10: -7292005235654953821
-      oloroso_11: -7496614477074178828
-      oloroso_12: -6326959534794008934
-      oloroso_13: 2423051975781494145
-      oloroso_14: -5322082601933371515
-      oloroso_15: 2282696952609052259
-      oloroso_16: 1417780536405736098
-      oloroso_17: -913266401801309447
-      oloroso_18: -3977288062854539261
-      oloroso_19: 2069222819593234027
-      oloroso_2: -1208948781543641093
-      oloroso_20: -4986487043547300781
-      oloroso_21: -2449090333010201820
-      oloroso_22: 4866593857728896886
-      oloroso_23: 5946754817182575928
-      oloroso_24: -972849529691572269
-      oloroso_25: -5380936347904189394
-      oloroso_26: -1396164576143413159
-      oloroso_27: -7027299380614208901
-      oloroso_28: 2913828436595555441
-      oloroso_29: -5175357955582033124
-      oloroso_3: 3798954716192390197
-      oloroso_30: 8742126414975014370
-      oloroso_31: 2758902629459778217
-      oloroso_32: -4274517131453801271
-      oloroso_33: 1000020518997743031
-      oloroso_34: 7932233061040125324
-      oloroso_4: 5172259345902853804
-      oloroso_5: 3741220786193391184
-      oloroso_6: 6018262451589453521
-      oloroso_7: -6901433214962320540
-      oloroso_8: 8847601422381531686
-      oloroso_9: 11150225387541554
+      oloroso redimension_0: -4578049904311919622
+      oloroso redimension_1: 8386225034867886465
+      oloroso redimension_10: 6616942934245199046
+      oloroso redimension_11: 6353704451331969810
+      oloroso redimension_12: 4709515572101303440
+      oloroso redimension_13: -6007990834056988252
+      oloroso redimension_14: -8013402620181329637
+      oloroso redimension_15: -8017852145019270834
+      oloroso redimension_16: 1336052493389847762
+      oloroso redimension_17: -2931110069178280989
+      oloroso redimension_18: -2809658329240737649
+      oloroso redimension_19: -8053170468042949704
+      oloroso redimension_2: -5993360151064313083
+      oloroso redimension_20: 6089927581796922693
+      oloroso redimension_21: 7794981757176627869
+      oloroso redimension_22: -1554882170617580660
+      oloroso redimension_23: 819216171393956307
+      oloroso redimension_24: 205264086400913140
+      oloroso redimension_25: -7204710183706535127
+      oloroso redimension_26: -237379270407482165
+      oloroso redimension_27: -7411133125223425722
+      oloroso redimension_28: 8843997233716669417
+      oloroso redimension_29: -909269592946926404
+      oloroso redimension_3: -3559583207867077428
+      oloroso redimension_30: 5742358957991677121
+      oloroso redimension_31: 7719997373123901457
+      oloroso redimension_32: -1989750896526048586
+      oloroso redimension_33: -1007477626526139222
+      oloroso redimension_34: -1443530493313280408
+      oloroso redimension_4: 6612412651997681237
+      oloroso redimension_5: 1704482680985584441
+      oloroso redimension_6: 78046338949657270
+      oloroso redimension_7: -869687056901994114
+      oloroso redimension_8: -8790337661217082519
+      oloroso redimension_9: 6124458920217915191
+      oloroso redimension_v1: 2056410338
+      oloroso redimension_v2: -678715350
+      oloroso redimension_v3: 1307288564
+      oloroso redimension_v4: 1534921306
+      oloroso redimension_v5: 497084592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
