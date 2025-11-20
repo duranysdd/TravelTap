@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     public Transform respawnPoint;
     public Transform nearRespawnPoint;
 
+    [Header("Energy Ammo")]
+public int energyAmmo = 0;
+
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -174,13 +178,26 @@ public class Player : MonoBehaviour
     }
 
     public void Atacando()
-    {
-        atacando = true;
-        rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y);
-    }
+{
+    if (atacando) return; // evita spamear
+
+    atacando = true;
+    rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y);
+
+    // Se apaga después de 0.3s (ajústalo según tu animación)
+    Invoke("NoAtacando", 0.3f);
+}
+
 
     public void NoAtacando()
     {
         atacando = false;
     }
+
+    public bool GetIsAttacking()
+{
+    return atacando;
+}
+
+
 }
