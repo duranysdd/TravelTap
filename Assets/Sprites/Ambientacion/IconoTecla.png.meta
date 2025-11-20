@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 2998747986013c64796aacf818ad81fa
+guid: f1a98f6f82a362a459b98ba9bf026847
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3323920856995780605
-    second: olorosofoto_0
+      213: 8044759666438860371
+    second: IconoTecla_0
   - first:
-      213: 6054161373850864009
-    second: olorosofoto_1
+      213: 5914669191956618882
+    second: IconoTecla_1
   - first:
-      213: 1455779122722294208
-    second: olorosofoto_2
+      213: -9095187420896158686
+    second: IconoTecla_2
   - first:
-      213: -6912376007983837410
-    second: olorosofoto_3
+      213: 214191594760091327
+    second: IconoTecla_3
   - first:
-      213: -1473481865215174751
-    second: olorosofoto_4
+      213: -8811070150503186708
+    second: IconoTecla_4
   - first:
-      213: -8061963001898970409
-    second: olorosofoto_5
-  - first:
-      213: 4826689878021712868
-    second: olorosofoto_6
+      213: -8864306433940316234
+    second: IconoTecla_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -157,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: olorosofoto_0
+      name: IconoTecla_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 48
-        width: 9
-        height: 9
+        x: 3
+        y: 94
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df7deb69860f02e20800000000000000
-      internalID: 3323920856995780605
+      spriteID: 35e6a7d2b4ab4af60800000000000000
+      internalID: 8044759666438860371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: olorosofoto_1
+      name: IconoTecla_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 8
-        width: 45
-        height: 49
+        x: 93
+        y: 94
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 989854571b3b40450800000000000000
-      internalID: 6054161373850864009
+      spriteID: 28e5586fa40251250800000000000000
+      internalID: 5914669191956618882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: olorosofoto_2
+      name: IconoTecla_2
       rect:
         serializedVersion: 2
-        x: 14
-        y: 55
-        width: 9
-        height: 9
+        x: 183
+        y: 93
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c9ca492667f33410800000000000000
-      internalID: 1455779122722294208
+      spriteID: 22c12e3aa3767c180800000000000000
+      internalID: -9095187420896158686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: olorosofoto_3
+      name: IconoTecla_3
       rect:
         serializedVersion: 2
-        x: 41
-        y: 52
-        width: 10
-        height: 9
+        x: 3
+        y: 3
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1fc032e4ae4210a0800000000000000
-      internalID: -6912376007983837410
+      spriteID: fb6bc8fde16f8f200800000000000000
+      internalID: 214191594760091327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: olorosofoto_4
+      name: IconoTecla_4
       rect:
         serializedVersion: 2
-        x: 4
-        y: 38
-        width: 7
-        height: 7
+        x: 93
+        y: 1
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a79ed8ec042d8be0800000000000000
-      internalID: -1473481865215174751
+      spriteID: ceeb534916ac8b580800000000000000
+      internalID: -8811070150503186708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: olorosofoto_5
+      name: IconoTecla_5
       rect:
         serializedVersion: 2
-        x: 53
-        y: 42
-        width: 10
-        height: 12
+        x: 183
+        y: 1
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,30 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d258772d572e1090800000000000000
-      internalID: -8061963001898970409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: olorosofoto_6
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 26
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4eb25740fd8dbf240800000000000000
-      internalID: 4826689878021712868
+      spriteID: 6bf17c07348abf480800000000000000
+      internalID: -8864306433940316234
       vertices: []
       indices: 
       edges: []
@@ -324,13 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      olorosofoto_0: 3323920856995780605
-      olorosofoto_1: 6054161373850864009
-      olorosofoto_2: 1455779122722294208
-      olorosofoto_3: -6912376007983837410
-      olorosofoto_4: -1473481865215174751
-      olorosofoto_5: -8061963001898970409
-      olorosofoto_6: 4826689878021712868
+      IconoTecla_0: 8044759666438860371
+      IconoTecla_1: 5914669191956618882
+      IconoTecla_2: -9095187420896158686
+      IconoTecla_3: 214191594760091327
+      IconoTecla_4: -8811070150503186708
+      IconoTecla_5: -8864306433940316234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

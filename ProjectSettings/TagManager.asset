@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Floor
   - Collectible
+<<<<<<< HEAD
   - Boss
+=======
+  - Enemy
+>>>>>>> b4ed31c5dd18a415b55f03a8a4cd58a425edf43c
   layers:
   - Default
   - TransparentFX
