@@ -7636,7 +7636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1318987984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8584,6 +8584,7 @@ MonoBehaviour:
     m_Bits: 8
   respawnPoint: {fileID: 1172871112}
   nearRespawnPoint: {fileID: 0}
+  energyAmmo: 0
 --- !u!1001 &1559684199
 PrefabInstance:
   m_ObjectHideFlags: 0
