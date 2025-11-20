@@ -93133,11 +93133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36185e088c1946948b608e03bd506966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  currentLevel: 1
-  collectiblesCollected: 0
-  totalCollectibles: 20
-  maxHealth: 3
-  currentHealth: 0
+  coleccionables: 0
+  coleccionablesNecesarios: 20
+  maxVidas: 3
+  vidasActuales: 0
+  maxVidasLimit: 5
 --- !u!4 &629319493
 Transform:
   m_ObjectHideFlags: 0
@@ -95049,7 +95049,7 @@ Transform:
   m_GameObject: {fileID: 1557222919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.46, y: -8.65, z: 0}
+  m_LocalPosition: {x: 67.71, y: -37.07, z: 0}
   m_LocalScale: {x: 0.065883294, y: 0.06310516, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -95140,9 +95140,6 @@ MonoBehaviour:
   graundLayer:
     serializedVersion: 2
     m_Bits: 8
-  collectibles: 0
-  maxHealth: 5
-  currentHealth: 0
   respawnPoint: {fileID: 0}
   nearRespawnPoint: {fileID: 0}
 --- !u!4 &1621310756 stripped
@@ -237682,8 +237679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   scoreText: {fileID: 678706252}
-  heartsPanel: {fileID: 1971614241}
-  heartPrefab: {fileID: 8051112582515443240, guid: 0fa21dc4af20a8c4da9cd67721be9c11, type: 3}
+  corazones: []
+  spriteLleno: {fileID: 0}
+  spriteVacio: {fileID: 0}
 --- !u!4 &1923623232
 Transform:
   m_ObjectHideFlags: 0

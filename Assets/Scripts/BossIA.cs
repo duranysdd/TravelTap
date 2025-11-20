@@ -33,7 +33,7 @@ public class BossAI : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
 
         // Si el jugador está dentro del rango de ataque → atacar
@@ -47,7 +47,7 @@ public class BossAI : MonoBehaviour
     void MoveTowardsPlayer()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        rb.linearVelocity = direction * speed;
     }
 
     void Attack()
