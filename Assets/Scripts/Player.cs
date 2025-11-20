@@ -6,9 +6,16 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool isInvincible = false;
     [HideInInspector] private bool isKnockedBack = false;
 
+
+    [Header("UI del Mapa")]
+    public bool tieneMapa = false;
+    public GameObject mapaUI;
+    private bool mapaAbierto = false;
+
     [Header("Movimiento")]
     public float speed = 5f;
     public float Jump = 8f;
+    public bool tieneLlave = false;
     public float checkRadius = 0.1f;
     public Transform groundCheck;
     public LayerMask graundLayer;
@@ -45,6 +52,12 @@ public class Player : MonoBehaviour
         if (!atacando) Movimientos();
 
         Animaciones();
+
+        if (tieneMapa && Input.GetKeyDown(KeyCode.M))
+        {
+            mapaAbierto = !mapaAbierto;
+            mapaUI.SetActive(mapaAbierto);
+        }
     }
 
     private void FixedUpdate()

@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 1d78ffc6cf2fac34494d281ed7d60286
+guid: f1a98f6f82a362a459b98ba9bf026847
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6273506205211298839
-    second: PushE_0
+      213: 8044759666438860371
+    second: IconoTecla_0
   - first:
-      213: 8545816087688869298
-    second: PushE_1
+      213: 5914669191956618882
+    second: IconoTecla_1
   - first:
-      213: 2179960578277096208
-    second: PushE_2
+      213: -9095187420896158686
+    second: IconoTecla_2
   - first:
-      213: 6367770371710733522
-    second: PushE_3
+      213: 214191594760091327
+    second: IconoTecla_3
   - first:
-      213: 8377731320803314948
-    second: PushE_4
+      213: -8811070150503186708
+    second: IconoTecla_4
+  - first:
+      213: -8864306433940316234
+    second: IconoTecla_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -151,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PushE_0
+      name: IconoTecla_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 99
-        width: 59
-        height: 71
+        x: 3
+        y: 94
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e3fb26485700f8a0800000000000000
-      internalID: -6273506205211298839
+      spriteID: 35e6a7d2b4ab4af60800000000000000
+      internalID: 8044759666438860371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushE_1
+      name: IconoTecla_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 99
-        width: 59
-        height: 71
+        x: 93
+        y: 94
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b5738e3476d89670800000000000000
-      internalID: 8545816087688869298
+      spriteID: 28e5586fa40251250800000000000000
+      internalID: 5914669191956618882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushE_2
+      name: IconoTecla_2
       rect:
         serializedVersion: 2
-        x: 187
-        y: 98
-        width: 59
-        height: 71
+        x: 183
+        y: 93
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01bbf849896c04e10800000000000000
-      internalID: 2179960578277096208
+      spriteID: 22c12e3aa3767c180800000000000000
+      internalID: -9095187420896158686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushE_3
+      name: IconoTecla_3
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
-        width: 59
-        height: 71
+        x: 3
+        y: 3
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2dc43194a6dde5850800000000000000
-      internalID: 6367770371710733522
+      spriteID: fb6bc8fde16f8f200800000000000000
+      internalID: 214191594760091327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PushE_4
+      name: IconoTecla_4
       rect:
         serializedVersion: 2
-        x: 97
-        y: 7
-        width: 59
-        height: 71
+        x: 93
+        y: 1
+        width: 82
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,8 +257,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40d4528cf3ea34470800000000000000
-      internalID: 8377731320803314948
+      spriteID: ceeb534916ac8b580800000000000000
+      internalID: -8811070150503186708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconoTecla_5
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf17c07348abf480800000000000000
+      internalID: -8864306433940316234
       vertices: []
       indices: 
       edges: []
@@ -274,11 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PushE_0: -6273506205211298839
-      PushE_1: 8545816087688869298
-      PushE_2: 2179960578277096208
-      PushE_3: 6367770371710733522
-      PushE_4: 8377731320803314948
+      IconoTecla_0: 8044759666438860371
+      IconoTecla_1: 5914669191956618882
+      IconoTecla_2: -9095187420896158686
+      IconoTecla_3: 214191594760091327
+      IconoTecla_4: -8811070150503186708
+      IconoTecla_5: -8864306433940316234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
