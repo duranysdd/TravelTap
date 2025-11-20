@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Floor
   - Collectible
+<<<<<<< HEAD
   - Enemy
+=======
+  - Boss
+>>>>>>> b52d59fa08838deacb6a20170cfd0748a6d7d2bf
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -43,6 +47,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1925829073
+    locked: 0
+  - name: EnemyAttack
+    uniqueID: 3734155709
+    locked: 0
+  - name: Enemy
+    uniqueID: 3483719381
     locked: 0
   m_RenderingLayers:
   - Default
