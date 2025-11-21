@@ -19,7 +19,7 @@ public class BossWaterController : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        // Movimiento hacia el jugador
+        
         if (distance > stopDistance)
         {
             Vector2 newPos = Vector2.Lerp(
@@ -31,7 +31,7 @@ public class BossWaterController : MonoBehaviour
             transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
         }
 
-        // Mirar hacia el jugador
+       
         if (player.position.x > transform.position.x)
             transform.localScale = new Vector3(1, 1, 1);
         else
@@ -60,8 +60,5 @@ public class BossWaterController : MonoBehaviour
             Debug.LogWarning("⚠️ Asigna 'waterAttackPrefab' y 'attackPoint'");
             return;
         }
-
-        // Instanciar la bola de agua
-        Instantiate(waterAttackPrefab, attackPoint.position, Quaternion.identity);
     }
 }

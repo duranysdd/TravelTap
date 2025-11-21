@@ -3,19 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - Floor
-  - Collectible
-  - Enemy
-  - Boss
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Floor
+  - 
   - Water
   - UI
-  - Player
+  - 
   - 
   - 
   - 
@@ -47,4 +43,3 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
-  - Layer 1
