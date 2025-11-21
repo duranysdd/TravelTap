@@ -60,8 +60,5 @@ public class BossWaterController : MonoBehaviour
             Debug.LogWarning("⚠️ Asigna 'waterAttackPrefab' y 'attackPoint'");
             return;
         }
-
-        
-        Instantiate(waterAttackPrefab, attackPoint.position, Quaternion.identity);
     }
 }
