@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 849becb25b73b084c92a51bf23507517
+guid: 5c37e2ed1fc9ac747add6e3aea4548bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3417718565338798583
-    second: sucio2_0
+      213: 6041722196191279067
+    second: sucio2Die_0
   - first:
-      213: 6671961799600754193
-    second: sucio2_1
+      213: -2688555886308009175
+    second: sucio2Die_1
   - first:
-      213: 4074581964488953226
-    second: sucio2_2
+      213: 6489210192801085582
+    second: sucio2Die_2
   - first:
-      213: -2513223630041837588
-    second: sucio2_3
+      213: -4618264415146800313
+    second: sucio2Die_3
+  - first:
+      213: -5634465080670505299
+    second: sucio2Die_4
+  - first:
+      213: -6068870489818295908
+    second: sucio2Die_5
+  - first:
+      213: 5708546953613420955
+    second: sucio2Die_6
+  - first:
+      213: 3228462214854321343
+    second: sucio2Die_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,7 +160,73 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sucio2_0
+      name: sucio2Die_0
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 4087
+        width: 898
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7f297b35288d350800000000000000
+      internalID: 6041722196191279067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sucio2Die_1
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 4087
+        width: 898
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b53dd7aa450bad0800000000000000
+      internalID: -2688555886308009175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sucio2Die_2
+      rect:
+        serializedVersion: 2
+        x: 4031
+        y: 4087
+        width: 898
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88b0cef94e4e0a50800000000000000
+      internalID: 6489210192801085582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sucio2Die_3
       rect:
         serializedVersion: 2
         x: 447
@@ -163,19 +241,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90629ba9213d190d0800000000000000
-      internalID: -3417718565338798583
+      spriteID: 74b0958abf0a8efb0800000000000000
+      internalID: -4618264415146800313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sucio2_1
+      name: sucio2Die_4
       rect:
         serializedVersion: 2
         x: 2239
-        y: 2323
-        width: 884
+        y: 2295
+        width: 898
         height: 688
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -185,19 +263,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11ecd2c38e1979c50800000000000000
-      internalID: 6671961799600754193
+      spriteID: da6ba4f9cdb5ec1b0800000000000000
+      internalID: -5634465080670505299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sucio2_2
+      name: sucio2Die_5
+      rect:
+        serializedVersion: 2
+        x: 4031
+        y: 2295
+        width: 898
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91978a917a07cba0800000000000000
+      internalID: -6068870489818295908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sucio2Die_6
       rect:
         serializedVersion: 2
         x: 447
-        y: 531
-        width: 828
+        y: 503
+        width: 898
         height: 688
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8dc39965b2db8830800000000000000
-      internalID: 4074581964488953226
+      spriteID: b9924c98535d83f40800000000000000
+      internalID: 5708546953613420955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sucio2_3
+      name: sucio2Die_7
       rect:
         serializedVersion: 2
-        x: 2253
-        y: 573
-        width: 828
-        height: 688
+        x: 2323
+        y: 1105
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +329,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cef0d329c6c3f1dd0800000000000000
-      internalID: -2513223630041837588
+      spriteID: fb4a92f774dcdcc20800000000000000
+      internalID: 3228462214854321343
       vertices: []
       indices: 
       edges: []
@@ -249,10 +349,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sucio2_0: -3417718565338798583
-      sucio2_1: 6671961799600754193
-      sucio2_2: 4074581964488953226
-      sucio2_3: -2513223630041837588
+      sucio2Die_0: 6041722196191279067
+      sucio2Die_1: -2688555886308009175
+      sucio2Die_2: 6489210192801085582
+      sucio2Die_3: -4618264415146800313
+      sucio2Die_4: -5634465080670505299
+      sucio2Die_5: -6068870489818295908
+      sucio2Die_6: 5708546953613420955
+      sucio2Die_7: 3228462214854321343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

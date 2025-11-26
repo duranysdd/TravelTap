@@ -28,6 +28,7 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
+        AudioListener.pause = true; 
     }
 
     public void Reanudar()
@@ -36,6 +37,7 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
+        AudioListener.pause = false;
     }  
 
     public void Reiniciar()
