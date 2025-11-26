@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public bool tieneEspada = false;
     public float Jump = 8f;
     public bool tieneLlave = false;
+    public bool tieneLlave2 = false;
     public float checkRadius = 0.1f;
     public Transform groundCheck;
     public LayerMask graundLayer;
