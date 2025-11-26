@@ -110,14 +110,6 @@ public class BossWaterController : MonoBehaviour
 
     private void Attack()
     {
-<<<<<<< HEAD
-        if (waterAttackPrefab == null || attackPoint == null)
-        {
-            Debug.LogWarning("⚠️ Asigna 'waterAttackPrefab' y 'attackPoint'");
-            return;
-        }
-    }
-=======
         if (waterAttackPrefab == null || attackPoint == null) return;
 
         Instantiate(waterAttackPrefab, attackPoint.position, Quaternion.identity);
@@ -191,5 +183,4 @@ void ShowVictoryScreen()
     VictoryScreen.instance.ShowVictory();
 
 }
->>>>>>> 5c74319f8eaf62984f89dc16b66f94cc9cac33d0
 }
