@@ -8682,13 +8682,14 @@ MonoBehaviour:
   tieneMapa: 0
   mapaUI: {fileID: 1318987983}
   speed: 2
+  tieneEspada: 0
   Jump: 3.2
   tieneLlave: 0
   checkRadius: 0.1
   groundCheck: {fileID: 1069961127}
   graundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   respawnPoint: {fileID: 1172871112}
   nearRespawnPoint: {fileID: 0}
   energyAmmo: 0
