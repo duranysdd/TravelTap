@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
+<<<<<<< HEAD
+=======
+  - Boss
+>>>>>>> 3261a9f3dead18b1caa074f19d13eb1da60149bb
   layers:
   - Default
   - TransparentFX
@@ -12,7 +16,11 @@ TagManager:
   - floor
   - Water
   - UI
+<<<<<<< HEAD
   - Cochinillas
+=======
+  - enemy
+>>>>>>> 3261a9f3dead18b1caa074f19d13eb1da60149bb
   - 
   - 
   - 
@@ -41,6 +49,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: particles
+    uniqueID: 3293454421
     locked: 0
   m_RenderingLayers:
   - Default
