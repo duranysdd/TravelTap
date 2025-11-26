@@ -10,11 +10,13 @@ public class WaterAttackProjectile : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-
-        // Dirección inicial hacia el jugador
-        if (target != null)
+        // Apuntar al Player porque ese es tu tag real
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            target = player.transform;
             direction = (target.position - transform.position).normalized;
+        }
 
         Destroy(gameObject, 5f);
     }
@@ -23,19 +25,17 @@ public class WaterAttackProjectile : MonoBehaviour
     {
         if (target == null) return;
 
-        // Dirección hacia el jugador (suavizada)
         Vector2 newDirection = (target.position - transform.position).normalized;
         direction = Vector2.Lerp(direction, newDirection, 0.05f);
 
-        // Mover el proyectil
         transform.position += (Vector3)(direction * speed * Time.deltaTime);
 
-        // Rotación visual
         transform.Rotate(0, 0, 180 * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // El proyectil debe dañar al Player
         if (collision.CompareTag("Player"))
         {
             Player player = collision.GetComponent<Player>();

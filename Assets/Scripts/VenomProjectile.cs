@@ -43,7 +43,8 @@ public class VenomProjectile : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            FractionalDamageSystem.AddDamage(fractionalDamage); // ✔ medio corazón
+            
+            collision.GetComponent<Player>()?.TakeDamage(1);
             Destroy(gameObject);
         }
 
