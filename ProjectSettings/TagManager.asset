@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 3
   tags:
+<<<<<<< HEAD
   - Floor
   - PlayerAttack
+=======
+  - PlayerAttack
+  - Floor
+>>>>>>> 8fe0be5921ea06f4d5d23592b6d0977d783e5db2
   - Boss
   layers:
   - Default

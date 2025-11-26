@@ -7,7 +7,9 @@ public class ItemEspada : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Player p = collision.GetComponent<Player>();
+
             p.tieneEspada = true;
+            GameManager.instance.tieneEspada = true; 
 
             Destroy(gameObject);
         }
