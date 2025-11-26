@@ -13,7 +13,7 @@ TagManager:
   - floor
   - Water
   - UI
-  - 
+  - enemy
   - 
   - 
   - 
@@ -42,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: particles
+    uniqueID: 3293454421
     locked: 0
   m_RenderingLayers:
   - Default
