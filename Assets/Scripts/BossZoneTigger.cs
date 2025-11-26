@@ -7,8 +7,8 @@ public class BossZoneTigger : MonoBehaviour
     public GameObject backgroundNormal;
     public GameObject backgroundBoss;
     public GameObject boss;
-    public GameObject barrier; 
-    public CanvasGroup blackScreen; 
+    public GameObject barrier;
+    public CanvasGroup blackScreen;
 
     [Header("Configuración")]
     public float fadeDuration = 1.5f;
@@ -16,39 +16,50 @@ public class BossZoneTigger : MonoBehaviour
 
     private bool bossStarted = false;
 
+    [Header("Habilidad del Arco")]
+    public WatersitoAttack watersitoAttack;
+
+    [Header("Música")]
+    public AudioSource musicSource;     // ← tu AudioSource principal
+    public AudioClip normalMusic;       // ← música normal
+    public AudioClip bossMusic;         // ← música del boss
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !bossStarted)
         {
             bossStarted = true;
+
+            // 🎵 Cambiar la música aquí mismo
+            if (musicSource != null && bossMusic != null)
+            {
+                musicSource.Stop();
+                musicSource.clip = bossMusic;
+                musicSource.Play();
+            }
+
             StartCoroutine(StartBossSequence());
         }
     }
 
     private IEnumerator StartBossSequence()
     {
-        
         if (blackScreen != null)
             yield return StartCoroutine(FadeToBlack());
 
-        
         backgroundNormal.SetActive(false);
         backgroundBoss.SetActive(true);
 
-        
         boss.SetActive(true);
-
-        
         barrier.SetActive(true);
 
-        
+        StartBossFight();
+
         yield return new WaitForSeconds(waitInDark);
 
-        
         if (blackScreen != null)
             yield return StartCoroutine(FadeFromBlack());
 
-        
         var controller = boss.GetComponent<BossWaterController>();
         if (controller != null)
             controller.StartAttacking();
@@ -74,5 +85,10 @@ public class BossZoneTigger : MonoBehaviour
             blackScreen.alpha = Mathf.Lerp(1f, 0f, t / fadeDuration);
             yield return null;
         }
+    }
+
+    void StartBossFight()
+    {
+        watersitoAttack.habilidadDesbloqueada = true;
     }
 }

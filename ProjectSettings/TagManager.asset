@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - Collectible
   - Enemy
+  - Boss
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
-  - 
+  - PlayerAttack
+  - EnemyAttack
   - 
   - 
   - 
@@ -52,6 +54,15 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 3483719381
+    locked: 0
+  - name: UI
+    uniqueID: 1198276089
+    locked: 0
+  - name: Player
+    uniqueID: 3815006807
+    locked: 0
+  - name: PlayerAttack
+    uniqueID: 53916765
     locked: 0
   m_RenderingLayers:
   - Default
