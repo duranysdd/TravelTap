@@ -13,6 +13,7 @@ public class ViboraController : MonoBehaviour
     public GameObject venomProjectile;
     public Transform firePoint;
     public float attackCooldown = 2f;
+    public float attackRange = 5f;
     private float attackTimer;
 
     [Header("Animación")]
@@ -80,6 +81,10 @@ public class ViboraController : MonoBehaviour
             return;
         }
 
+    // Si el jugador está muy lejos, no atacar
+         if (Vector2.Distance(transform.position, player.position) > attackRange)
+            return;
+
         LookAtPlayer();
 
         animator.SetTrigger("Attack");
@@ -101,11 +106,20 @@ public class ViboraController : MonoBehaviour
         sr.flipX = currentPoint.position.x < transform.position.x;
     }
 
-    private void LookAtPlayer()
-    {
-        if (player == null) return;
-        sr.flipX = player.position.x < transform.position.x;
-    }
+   private void LookAtPlayer()
+{
+    if (player == null) return;
+
+    bool flip = player.position.x < transform.position.x;
+
+    // Girar el sprite
+    sr.flipX = flip;
+
+    // 🔥 Girar el firePoint
+    Vector3 scale = firePoint.localScale;
+    scale.x = flip ? -1 : 1;
+    firePoint.localScale = scale;
+}
 
     // ------------------------------------------------------
     //       EMPUJAR A WATERSITO Y EVITAR QUE SE SUBA

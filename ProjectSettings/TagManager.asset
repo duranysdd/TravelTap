@@ -6,9 +6,16 @@ TagManager:
   tags:
   - Floor
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   - Boss
 >>>>>>> 3261a9f3dead18b1caa074f19d13eb1da60149bb
+=======
+  - Collectible
+  - Enemy
+  - Boss
+  - PlayerAttack
+>>>>>>> 5c74319f8eaf62984f89dc16b66f94cc9cac33d0
   layers:
   - Default
   - TransparentFX
@@ -17,6 +24,7 @@ TagManager:
   - Water
   - UI
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Cochinillas
 =======
   - enemy
@@ -24,6 +32,12 @@ TagManager:
   - 
   - 
   - 
+=======
+  - Player
+  - Enemy
+  - PlayerAttack
+  - EnemyAttack
+>>>>>>> 5c74319f8eaf62984f89dc16b66f94cc9cac33d0
   - 
   - 
   - 
@@ -52,6 +66,15 @@ TagManager:
     locked: 0
   - name: particles
     uniqueID: 3293454421
+    locked: 0
+  - name: UI
+    uniqueID: 1198276089
+    locked: 0
+  - name: Player
+    uniqueID: 3815006807
+    locked: 0
+  - name: PlayerAttack
+    uniqueID: 53916765
     locked: 0
   m_RenderingLayers:
   - Default
