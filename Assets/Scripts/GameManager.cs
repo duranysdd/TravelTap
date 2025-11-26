@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public bool tieneEspada = false;
 
     public int coleccionables = 0; 
     public int coleccionablesNecesarios = 20; 

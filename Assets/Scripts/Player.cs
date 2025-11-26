@@ -6,6 +6,11 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool isInvincible = false;
     [HideInInspector] private bool isKnockedBack = false;
 
+    [Header("Ataque")]
+    public Transform attackPoint;
+    public bool tieneEspada = false;         
+    public float attackRadius = 0.4f;    
+    public LayerMask enemyLayer;          
 
     [Header("UI del Mapa")]
     public bool tieneMapa = false;
@@ -30,18 +35,17 @@ public class Player : MonoBehaviour
     public Transform nearRespawnPoint;
 
     [Header("Energy Ammo")]
-public int energyAmmo = 0;
-
+    public int energyAmmo = 0;
 
     private void Start()
     {
+        tieneEspada = GameManager.instance.tieneEspada;
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
         if (respawnPoint == null)
             respawnPoint = transform;
 
-        // Actualiza UI al iniciar
         if (UIManager.instance != null)
         {
             UIManager.instance.UpdateHearts();
@@ -90,8 +94,8 @@ public int energyAmmo = 0;
         if (Input.GetButtonDown("Jump") && isGrounded && !atacando)
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, Jump);
 
-        if (Input.GetKeyDown(KeyCode.Z) && !atacando && !isKnockedBack && isGrounded)
-            Atacando();
+        if (Input.GetMouseButtonDown(0) && tieneEspada && !atacando && !isKnockedBack && isGrounded)
+        Atacando();
     }
 
     public void Animaciones()
@@ -148,13 +152,11 @@ public int energyAmmo = 0;
         isInvincible = false;
     }
 
-    // Contador de Items que ahora esta en el GameManager
     public void AddCollectible(int amount = 1)
     {
         GameManager.instance.AgregarColeccionable(amount);
     }
 
-    // Contador-Vidas que ahora esta en  el GameManager
     public void TakeDamage(int amount, bool causeRespawn = false)
     {
         if (isInvincible) return;
@@ -184,23 +186,41 @@ public int energyAmmo = 0;
         Debug.Log("Te moriste wey jaja");
         transform.position = respawnPoint.position;
 
-        // Si todo va bien se restaura la vida si se muere
         GameManager.instance.vidasActuales = GameManager.instance.maxVidas;
         if (UIManager.instance != null)
             UIManager.instance.UpdateHearts();
     }
-
     public void Atacando()
-{
-    if (atacando) return; // evita spamear
+    {
+        if (atacando) return;
 
-    atacando = true;
-    rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y);
+        atacando = true;
+        rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y);
 
-    // Se apaga después de 0.3s (ajústalo según tu animación)
-    Invoke("NoAtacando", 0.3f);
-}
+        AttackHitbox();
 
+        Invoke("NoAtacando", 0.3f);
+    }
+
+    private void AttackHitbox()
+    {
+        if (attackPoint == null) return;
+
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, enemyLayer);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemigo>()?.TakeDamage(1); 
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+    }
 
     public void NoAtacando()
     {
@@ -208,9 +228,7 @@ public int energyAmmo = 0;
     }
 
     public bool GetIsAttacking()
-{
-    return atacando;
-}
-
-
+    {
+        return atacando;
+    }
 }
