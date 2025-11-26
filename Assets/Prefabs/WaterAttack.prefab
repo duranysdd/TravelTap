@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1164930771762523228}
   - component: {fileID: 4977811406936678901}
   - component: {fileID: 1875445977409215317}
-  - component: {fileID: 5480354881836537253}
+  - component: {fileID: 4411407653220991643}
   m_Layer: 9
   m_Name: WaterAttack
   m_TagString: Untagged
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1925829073
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7591162467461704579, guid: aafa6b202cf45be4199180ca3923c8af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,7 +156,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2.87
---- !u!114 &5480354881836537253
+--- !u!114 &4411407653220991643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,8 +165,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3471777830551155599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62ac4ef122a6c4442a31370714575ef8, type: 3}
+  m_Script: {fileID: 11500000, guid: 50ef7a6d8abd189479527065de633079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterAttackProjectile
-  speed: 5
+  speed: 4
   damage: 1
