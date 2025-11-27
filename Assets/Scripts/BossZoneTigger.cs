@@ -20,9 +20,36 @@ public class BossZoneTigger : MonoBehaviour
     public WatersitoAttack watersitoAttack;
 
     [Header("Música")]
-    public AudioSource musicSource;     // ← tu AudioSource principal
-    public AudioClip normalMusic;       // ← música normal
-    public AudioClip bossMusic;         // ← música del boss
+    public AudioSource musicSource;     // AudioSource principal
+    public AudioClip normalMusic;       // música normal
+    public AudioClip bossMusic;         // música del boss
+
+    // ← Aquí inicializamos el boss apagado correctamente
+    void Awake()
+    {
+        if (boss != null)
+        {
+            // Mantener GameObject activo para que no se pierda el sprite
+            boss.SetActive(true);
+
+            // Ocultar visualmente el boss
+            SpriteRenderer sr = boss.GetComponent<SpriteRenderer>();
+            if (sr != null)
+                sr.enabled = false;
+
+            // Desactivar scripts y colliders hasta que empiece la pelea
+            var controller = boss.GetComponent<BossWaterController>();
+            if (controller != null)
+                controller.enabled = false;
+
+            var collider = boss.GetComponent<Collider2D>();
+            if (collider != null)
+                collider.enabled = false;
+        }
+
+        if (barrier != null)
+            barrier.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,7 +57,7 @@ public class BossZoneTigger : MonoBehaviour
         {
             bossStarted = true;
 
-            // 🎵 Cambiar la música aquí mismo
+            // Cambiar música a la del boss
             if (musicSource != null && bossMusic != null)
             {
                 musicSource.Stop();
@@ -47,11 +74,26 @@ public class BossZoneTigger : MonoBehaviour
         if (blackScreen != null)
             yield return StartCoroutine(FadeToBlack());
 
-        backgroundNormal.SetActive(false);
-        backgroundBoss.SetActive(true);
+        if (backgroundNormal != null) backgroundNormal.SetActive(false);
+        if (backgroundBoss != null) backgroundBoss.SetActive(true);
 
-        boss.SetActive(true);
-        barrier.SetActive(true);
+        // Activar el boss visualmente y scripts
+        if (boss != null)
+        {
+            SpriteRenderer sr = boss.GetComponent<SpriteRenderer>();
+            if (sr != null)
+                sr.enabled = true;
+
+            var controller = boss.GetComponent<BossWaterController>();
+            if (controller != null)
+                controller.enabled = true;
+
+            var collider = boss.GetComponent<Collider2D>();
+            if (collider != null)
+                collider.enabled = true;
+        }
+
+        if (barrier != null) barrier.SetActive(true);
 
         StartBossFight();
 
@@ -60,9 +102,13 @@ public class BossZoneTigger : MonoBehaviour
         if (blackScreen != null)
             yield return StartCoroutine(FadeFromBlack());
 
-        var controller = boss.GetComponent<BossWaterController>();
-        if (controller != null)
-            controller.StartAttacking();
+        // Iniciar ataque del boss
+        if (boss != null)
+        {
+            var controller = boss.GetComponent<BossWaterController>();
+            if (controller != null)
+                controller.StartAttacking();
+        }
     }
 
     private IEnumerator FadeToBlack()
@@ -71,7 +117,8 @@ public class BossZoneTigger : MonoBehaviour
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            blackScreen.alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            if (blackScreen != null)
+                blackScreen.alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
             yield return null;
         }
     }
@@ -82,13 +129,15 @@ public class BossZoneTigger : MonoBehaviour
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            blackScreen.alpha = Mathf.Lerp(1f, 0f, t / fadeDuration);
+            if (blackScreen != null)
+                blackScreen.alpha = Mathf.Lerp(1f, 0f, t / fadeDuration);
             yield return null;
         }
     }
 
     void StartBossFight()
     {
-        watersitoAttack.habilidadDesbloqueada = true;
+        if (watersitoAttack != null)
+            watersitoAttack.habilidadDesbloqueada = true;
     }
 }
