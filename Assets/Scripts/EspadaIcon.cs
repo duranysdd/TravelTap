@@ -9,7 +9,12 @@ public class ItemEspada : MonoBehaviour
             Player p = collision.GetComponent<Player>();
 
             p.tieneEspada = true;
-            GameManager.instance.tieneEspada = true; 
+            GameManager.instance.tieneEspada = true;
+
+            GameManager.instance.MostrarMensaje(
+                "Has obtenido la espada\nPresiona Click izquierdo para atacar",
+                4f
+            );
 
             Destroy(gameObject);
         }
