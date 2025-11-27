@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class VictoryScreen : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class VictoryScreen : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+        else
+            Destroy(gameObject);
 
         cinematic.SetActive(false);
     }
@@ -17,5 +20,10 @@ public class VictoryScreen : MonoBehaviour
     public void ShowVictory()
     {
         cinematic.SetActive(true);
+        VictoryCinematic cinematicScript = cinematic.GetComponent<VictoryCinematic>();
+        if (cinematicScript != null)
+        {
+            StartCoroutine(cinematicScript.PlayCinematic());
+        }
     }
 }

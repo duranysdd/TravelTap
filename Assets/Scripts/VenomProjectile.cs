@@ -4,7 +4,7 @@ using System.Collections;
 public class VenomProjectile : MonoBehaviour
 {
     public float speed = 4f;
-    private float fractionalDamage = 0.5f; // MEDIA VIDA
+    
 
     private bool canHit = false;
     private Vector3 direction;
