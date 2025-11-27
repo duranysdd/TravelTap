@@ -3,7 +3,7 @@ using UnityEngine;
 public class BossWaterController : MonoBehaviour
 {
     [Header("Ataque")]
-    public GameObject waterAttackPrefab; 
+    public GameObject waterAttackPrefab;
     public Transform attackPoint;
     public float attackRange = 4f;
     public float attackInterval = 2f;
@@ -27,10 +27,12 @@ public class BossWaterController : MonoBehaviour
     private bool isDead = false;
 
     private Animator anim;
+    private SpriteRenderer sr;  // Nueva referencia al SpriteRenderer
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();  // Obtén el SpriteRenderer
 
         currentHealth = maxHealth;
 
@@ -50,13 +52,13 @@ public class BossWaterController : MonoBehaviour
         HandleTeleport();
     }
 
-    // ➜ Girar hacia el jugador
+    // ➜ Girar hacia el jugador (usando flipX en lugar de cambiar la escala)
     void HandleFlip()
     {
         if (player.position.x > transform.position.x)
-            transform.localScale = new Vector3(1, 1, 1);
+            sr.flipX = false;  // Voltea el sprite a la derecha
         else
-            transform.localScale = new Vector3(-1, 1, 1);
+            sr.flipX = true;   // Voltea el sprite a la izquierda
     }
 
     // ➜ Movimiento e Idle
@@ -116,72 +118,69 @@ public class BossWaterController : MonoBehaviour
     }
 
     void HandleTeleport()
-{
-    if (teleportPoints.Length == 0) return;
-
-    teleportTimer += Time.deltaTime;
-
-    if (teleportTimer >= teleportInterval)
     {
-        teleportTimer = 0f;
-        Teleport();
+        if (teleportPoints.Length == 0) return;
+
+        teleportTimer += Time.deltaTime;
+
+        if (teleportTimer >= teleportInterval)
+        {
+            teleportTimer = 0f;
+            Teleport();
+        }
     }
-}
 
-void Teleport()
-{
-    // Efecto de salida
-    if (teleportEffect != null)
-        Instantiate(teleportEffect, transform.position, Quaternion.identity);
+    void Teleport()
+    {
+        // Efecto de salida
+        if (teleportEffect != null)
+            Instantiate(teleportEffect, transform.position, Quaternion.identity);
 
-    int randomIndex = Random.Range(0, teleportPoints.Length);
+        int randomIndex = Random.Range(0, teleportPoints.Length);
 
-    transform.position = teleportPoints[randomIndex].position;
+        transform.position = teleportPoints[randomIndex].position;
 
-    // Efecto de entrada
-    if (teleportEffect != null)
-        Instantiate(teleportEffect, transform.position, Quaternion.identity);
-}
-
+        // Efecto de entrada
+        if (teleportEffect != null)
+            Instantiate(teleportEffect, transform.position, Quaternion.identity);
+    }
 
     public void TakeDamage(int amount)
-{
-    if (isDead) return;
+    {
+        if (isDead) return;
 
-    currentHealth -= amount;
+        currentHealth -= amount;
 
-    if (healthBar != null)
-        healthBar.value = currentHealth;
+        if (healthBar != null)
+            healthBar.value = currentHealth;
 
-    anim.SetTrigger("Hurt");
+        anim.SetTrigger("Hurt");
 
-    if (currentHealth <= 0)
-        Die();
-}
+        if (currentHealth <= 0)
+            Die();
+    }
 
-void Die()
-{
-    isDead = true;
+    void Die()
+    {
+        isDead = true;
 
-    anim.SetBool("isWalking", false);
-    anim.SetBool("isAttacking", false);
+        anim.SetBool("isWalking", false);
+        anim.SetBool("isAttacking", false);
 
-    anim.SetTrigger("Death");
+        anim.SetTrigger("Death");
 
-    // Evitar movimiento
-    CancelInvoke(nameof(Attack));
+        // Evitar movimiento
+        CancelInvoke(nameof(Attack));
 
-    // Desactivar colisionador
-    Collider2D col = GetComponent<Collider2D>();
-    if (col != null) col.enabled = false;
+        // Desactivar colisionador
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
 
-    Invoke(nameof(ShowVictoryScreen), 2f);
-}
+        Invoke(nameof(ShowVictoryScreen), 2f);
+    }
 
-
-void ShowVictoryScreen()
-{
-    VictoryScreen.instance.ShowVictory();
-
-}
+    void ShowVictoryScreen()
+    {
+        VictoryScreen.instance.ShowVictory();
+    }
 }
