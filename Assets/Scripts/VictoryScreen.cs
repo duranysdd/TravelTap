@@ -1,11 +1,28 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using TMPro;
 
 public class VictoryScreen : MonoBehaviour
 {
     public static VictoryScreen instance;
 
-    public GameObject cinematic;
+    [Header("Fondo de pantalla")]
+    public GameObject background;
+
+    [Header("Textos de Victoria")]
+    public TMP_Text victoryText;
+    public TMP_Text creditsText;
+
+    [Header("Logos")]
+    public GameObject logo1;
+    public GameObject logo2;
+
+    [Header("Movimiento de Créditos")]
+    public float scrollSpeed = 30f;
+    public float startDelay = 5f;
+    public float scrollDistance = 2000f;
+
+    private Vector3 startPos;
 
     private void Awake()
     {
@@ -14,16 +31,56 @@ public class VictoryScreen : MonoBehaviour
         else
             Destroy(gameObject);
 
-        cinematic.SetActive(false);
+        if (creditsText != null)
+            startPos = creditsText.rectTransform.anchoredPosition;
+
+        // OCULTAR TODO AL INICIO
+        if (background != null) background.SetActive(false);
+        if (victoryText != null) victoryText.gameObject.SetActive(false);
+        if (creditsText != null) creditsText.gameObject.SetActive(false);
+        if (logo1 != null) logo1.SetActive(false);
+        if (logo2 != null) logo2.SetActive(false);
     }
 
     public void ShowVictory()
     {
-        cinematic.SetActive(true);
-        VictoryCinematic cinematicScript = cinematic.GetComponent<VictoryCinematic>();
-        if (cinematicScript != null)
+        StartCoroutine(ShowSequence());
+    }
+
+    private IEnumerator ShowSequence()
+    {
+        // ACTIVAR FONDO
+        if (background != null) background.SetActive(true);
+
+        // MOSTRAR TEXTO DE VICTORIA
+        victoryText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(15f);
+
+        // PASAR A CREDITOS
+        victoryText.gameObject.SetActive(false);
+        creditsText.gameObject.SetActive(true);
+
+        // ACTIVAR LOGOS
+        if (logo1 != null) logo1.SetActive(true);
+        if (logo2 != null) logo2.SetActive(true);
+
+        yield return new WaitForSeconds(startDelay);
+
+        // INICIAR SCROLL
+        yield return StartCoroutine(ScrollCredits());
+    }
+
+    private IEnumerator ScrollCredits()
+    {
+        float moved = 0f;
+
+        while (moved < scrollDistance)
         {
-            StartCoroutine(cinematicScript.PlayCinematic());
+            float step = scrollSpeed * Time.deltaTime;
+            creditsText.rectTransform.anchoredPosition += new Vector2(0, step);
+            moved += step;
+            yield return null;
         }
     }
 }

@@ -21,18 +21,18 @@ public class BossWaterController : MonoBehaviour
     public ParticleSystem teleportEffect;
 
     [Header("Vida")]
-    public int maxHealth = 100;
+    public int maxHealth = 10;  // 10 golpes de watersito
     public int currentHealth;
     public UnityEngine.UI.Slider healthBar;
     private bool isDead = false;
 
     private Animator anim;
-    private SpriteRenderer sr;  // Nueva referencia al SpriteRenderer
+    private SpriteRenderer sr;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();  // Obtén el SpriteRenderer
+        sr = GetComponent<SpriteRenderer>();
 
         currentHealth = maxHealth;
 
@@ -52,27 +52,17 @@ public class BossWaterController : MonoBehaviour
         HandleTeleport();
     }
 
-    // ➜ Girar hacia el jugador (usando flipX en lugar de cambiar la escala)
     void HandleFlip()
     {
-        if (player.position.x > transform.position.x)
-            sr.flipX = false;  // Voltea el sprite a la derecha
-        else
-            sr.flipX = true;   // Voltea el sprite a la izquierda
+        sr.flipX = player.position.x < transform.position.x;
     }
 
-    // ➜ Movimiento e Idle
     void HandleMovement(float distance)
     {
         if (distance > stopDistance)
         {
             anim.SetBool("isWalking", true);
-
-            Vector2 newPos = Vector2.Lerp(
-                transform.position,
-                player.position,
-                moveSpeed * Time.deltaTime
-            );
+            Vector2 newPos = Vector2.Lerp(transform.position, player.position, moveSpeed * Time.deltaTime);
             transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
         }
         else
@@ -81,24 +71,18 @@ public class BossWaterController : MonoBehaviour
         }
     }
 
-    // ➜ Sistema de ataque automático
     void HandleAttack(float distance)
     {
         if (distance <= attackRange && !isAttacking)
-        {
             StartAttacking();
-        }
         else if (distance > attackRange && isAttacking)
-        {
             StopAttacking();
-        }
     }
 
     public void StartAttacking()
     {
         isAttacking = true;
         anim.SetBool("isAttacking", true);
-
         InvokeRepeating(nameof(Attack), 0f, attackInterval);
     }
 
@@ -106,15 +90,23 @@ public class BossWaterController : MonoBehaviour
     {
         isAttacking = false;
         anim.SetBool("isAttacking", false);
-
         CancelInvoke(nameof(Attack));
     }
 
     private void Attack()
     {
-        if (waterAttackPrefab == null || attackPoint == null) return;
+        if (waterAttackPrefab == null || attackPoint == null || player == null) return;
 
-        Instantiate(waterAttackPrefab, attackPoint.position, Quaternion.identity);
+        // Instancia el proyectil
+        GameObject projectile = Instantiate(waterAttackPrefab, attackPoint.position, Quaternion.identity);
+
+        // Calcula dirección hacia el jugador
+        Vector2 direction = (player.position - attackPoint.position).normalized;
+
+        // Aplica dirección al proyectil
+        HolyWaterArc arc = projectile.GetComponent<HolyWaterArc>();
+        if (arc != null)
+            arc.SetDirection(direction);
     }
 
     void HandleTeleport()
@@ -122,7 +114,6 @@ public class BossWaterController : MonoBehaviour
         if (teleportPoints.Length == 0) return;
 
         teleportTimer += Time.deltaTime;
-
         if (teleportTimer >= teleportInterval)
         {
             teleportTimer = 0f;
@@ -132,15 +123,12 @@ public class BossWaterController : MonoBehaviour
 
     void Teleport()
     {
-        // Efecto de salida
         if (teleportEffect != null)
             Instantiate(teleportEffect, transform.position, Quaternion.identity);
 
         int randomIndex = Random.Range(0, teleportPoints.Length);
-
         transform.position = teleportPoints[randomIndex].position;
 
-        // Efecto de entrada
         if (teleportEffect != null)
             Instantiate(teleportEffect, transform.position, Quaternion.identity);
     }
@@ -166,13 +154,10 @@ public class BossWaterController : MonoBehaviour
 
         anim.SetBool("isWalking", false);
         anim.SetBool("isAttacking", false);
-
         anim.SetTrigger("Death");
 
-        // Evitar movimiento
         CancelInvoke(nameof(Attack));
 
-        // Desactivar colisionador
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 

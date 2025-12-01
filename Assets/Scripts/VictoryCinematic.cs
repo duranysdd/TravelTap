@@ -1,77 +1,47 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 
 public class VictoryCinematic : MonoBehaviour
 {
-    public CanvasGroup panel;     // Panel negro
-    public Text message;          // Texto del mensaje
-    public GameObject[] logos;    // Logos que aparecerán
-
-    public float fadeTime = 1f;
-    public float waitTime = 1.5f;
-    public float slideDistance = 50f; // Desplazamiento del texto desde arriba
+    public CanvasGroup panel;         // El panel principal
+    public TextMeshProUGUI message;   // Tu texto dentro del panel
 
     private void Awake()
     {
-        panel.alpha = 0f;
-        panel.blocksRaycasts = true; // Bloquea input si quieres
-        message.gameObject.SetActive(false);
+        // El panel inicia invisible
+        if(panel != null)
+            panel.alpha = 0f;
 
-        foreach (GameObject logo in logos)
-            logo.SetActive(false);
+        // El texto inicia invisible
+        if(message != null)
+            message.alpha = 0f;
     }
 
-    public IEnumerator PlayCinematic()
+    public void PlayVictory()
     {
-        gameObject.SetActive(true);
+        StartCoroutine(PlayCinematic());
+    }
 
-        // Mostrar texto
-        message.gameObject.SetActive(true);
-
-        // Posición inicial del texto
-        RectTransform rt = message.GetComponent<RectTransform>();
-        Vector3 endPos = rt.localPosition;
-        Vector3 startPos = endPos + new Vector3(0, slideDistance, 0);
-        rt.localPosition = startPos;
-
-        // Fade-in del panel y deslizar el texto
-        float t = 0f;
-        while (t < fadeTime)
+    IEnumerator PlayCinematic()
+    {
+        // Fade del panel
+        float t = 0;
+        while(t < 1)
         {
-            t += Time.unscaledDeltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, t / fadeTime);
-            panel.alpha = alpha;
-            rt.localPosition = Vector3.Lerp(startPos, endPos, t / fadeTime);
-            yield return null;
-        }
-        panel.alpha = 1f;
-        rt.localPosition = endPos;
-
-        // Mostrar logos con fade
-        foreach (GameObject logo in logos)
-        {
-            logo.SetActive(true);
-            LogoFade fade = logo.GetComponent<LogoFade>();
-            if (fade != null)
-                fade.FadeIn();
-        }
-
-        // Esperar tiempo de lectura
-        yield return new WaitForSecondsRealtime(waitTime);
-
-        // Fade-out del panel y deslizar texto hacia abajo
-        t = 0f;
-        Vector3 textPos = rt.localPosition;
-        while (t < fadeTime)
-        {
-            t += Time.unscaledDeltaTime;
-            panel.alpha = Mathf.Lerp(1f, 0f, t / fadeTime);
-            rt.localPosition = Vector3.Lerp(textPos, textPos - new Vector3(0, slideDistance / 2, 0), t / fadeTime);
+            t += Time.deltaTime;
+            panel.alpha = t;
             yield return null;
         }
 
-        panel.alpha = 0f;
-        gameObject.SetActive(false);
+        // Aparece el texto luego del panel
+        float t2 = 0;
+        while(t2 < 1)
+        {
+            t2 += Time.deltaTime;
+            message.alpha = t2;
+            yield return null;
+        }
     }
 }

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//YA NO SE OCUPA
 public class BossHealthBar : MonoBehaviour
 {
     public Slider slider;

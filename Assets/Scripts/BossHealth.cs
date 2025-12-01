@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//YA NO SE OCUPA
+
 public class BossHealth : MonoBehaviour
 {
     public int maxHealth = 100;

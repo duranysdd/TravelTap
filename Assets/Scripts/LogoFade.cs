@@ -2,18 +2,17 @@ using UnityEngine;
 using System.Collections;
 
 public class LogoFade : MonoBehaviour
-{
+{ 
+    public CanvasGroup[] images; // Arrastra aquí tus 2 imágenes
     public float fadeDuration = 1f;
-    private CanvasGroup cg;
 
-    void Awake()
+    private void Awake()
     {
-        // Obtener CanvasGroup o agregarlo si no existe
-        cg = GetComponent<CanvasGroup>();
-        if (cg == null)
-            cg = gameObject.AddComponent<CanvasGroup>();
-
-        cg.alpha = 0f; // Empieza invisible
+        foreach (CanvasGroup cg in images)
+        {
+            if (cg == null) continue;
+            cg.alpha = 0f; // invisibles al inicio
+        }
     }
 
     public void FadeIn()
@@ -24,12 +23,25 @@ public class LogoFade : MonoBehaviour
     private IEnumerator FadeRoutine()
     {
         float t = 0f;
+
         while (t < fadeDuration)
         {
             t += Time.unscaledDeltaTime;
-            cg.alpha = Mathf.Lerp(0f, 1f, t / fadeDuration);
+            float a = Mathf.Lerp(0f, 1f, t / fadeDuration);
+
+            foreach (CanvasGroup cg in images)
+            {
+                if (cg != null)
+                    cg.alpha = a;
+            }
+
             yield return null;
         }
-        cg.alpha = 1f;
+
+        foreach (CanvasGroup cg in images)
+        {
+            if (cg != null)
+                cg.alpha = 1f;
+        }
     }
 }
