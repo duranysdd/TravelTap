@@ -11,6 +11,9 @@ public class MapItem : MonoBehaviour
             if (pm != null)
             {
                 pm.tieneMapa = true;
+
+                pm.checkPoint = pm.transform.position;
+
                 Destroy(gameObject);
             }
         }
