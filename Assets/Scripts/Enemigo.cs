@@ -17,7 +17,7 @@ public class Enemigo : MonoBehaviour
     public float moveSpeed = 2f;
     public float tolerance = 0.3f;
 
-    [Header("Invencibilidad (cuando recibe daño)")]
+    [Header("Invencibilidad del enemigo al recibir daño")]
     public float enemyInvTime = 0.3f;
     private bool isInvincible = false;
 
@@ -29,28 +29,19 @@ public class Enemigo : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-
         currentHealth = maxHealth;
 
-        if (rb != null)
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if (pointA == null || pointB == null)
         {
-            Debug.LogError("No hay puntos asignados al enemigo");
+            Debug.LogError("No asignaste pointA o pointB al enemigo.");
             enabled = false;
             return;
         }
 
-        Vector3 localScale = transform.localScale;
-        localScale.x = Mathf.Abs(localScale.x);
-        transform.localScale = localScale;
-
         float distA = Vector3.Distance(transform.position, pointA.position);
         float distB = Vector3.Distance(transform.position, pointB.position);
-
         targetPosition = (distA < distB) ? pointB.position : pointA.position;
 
         Flip();
@@ -58,8 +49,6 @@ public class Enemigo : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb == null) return;
-
         Vector3 currentPosition = transform.position;
 
         if (Mathf.Abs(targetPosition.x - currentPosition.x) < tolerance)
@@ -86,9 +75,9 @@ public class Enemigo : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    // ==========================
-    //   RECIBIR DAÑO DEL PLAYER
-    // ==========================
+    // =====================
+    //   RECIBIR DAÑO
+    // =====================
     public void TakeDamage(int amount)
     {
         if (isInvincible) return;
@@ -124,23 +113,23 @@ public class Enemigo : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // ==========================
-    //   COLISIÓN CON PLAYER
-    // ==========================
+    // =====================
+    //   COLISIÓN
+    // =====================
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Player player = collision.collider.GetComponent<Player>();
 
         if (player == null) return;
 
-        // Si el player está atacando → EL ENEMIGO RECIBE DAÑO
+        // Si el Player está atacando → ENEMIGO RECIBE DAÑO
         if (player.GetIsAttacking())
         {
             TakeDamage(1);
             return;
         }
 
-        // Si el player NO está atacando → EL ENEMIGO DA DAÑO
+        // Si NO está atacando → EL ENEMIGO LE PEGA AL PLAYER
         if (!player.isInvincible)
         {
             player.TakeDamage(damage);

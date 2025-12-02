@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: dd97c04f7d1fc174da515201430ddd73
+guid: 93d18bef4c400254d9e0e7e9db510018
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2727950703336263401
-    second: CuadroTxt_0
+      213: -8094509390417219303
+    second: PRECRIONA_0
+  - first:
+      213: -80709805638236917
+    second: PRECRIONA_1
+  - first:
+      213: 6061745797994530067
+    second: PRECRIONA_2
+  - first:
+      213: 6110176515649654877
+    second: PRECRIONA_3
+  - first:
+      213: -7347791462849977022
+    second: PRECRIONA_4
+  - first:
+      213: 4020257451830224514
+    second: PRECRIONA_5
+  - first:
+      213: -7256701538774871323
+    second: PRECRIONA_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +157,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CuadroTxt_0
+      name: PRECRIONA_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 120
-        height: 80
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ee822d16b0abd520800000000000000
-      internalID: 2727950703336263401
+      spriteID: 9113e1198968aaf80800000000000000
+      internalID: -8094509390417219303
       vertices: []
       indices: 
       edges: []
@@ -164,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b3661729b5bff1444ab3a363daac75d1
     internalID: 0
     vertices: []
     indices: 
@@ -172,9 +190,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      CuadroTxt_0: 2727950703336263401
+      PRECRIONA_0: -8094509390417219303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

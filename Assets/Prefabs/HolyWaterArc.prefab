@@ -43,7 +43,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887911507039173745}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -112,7 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HolyWaterArc
   speed: 8
   lifetime: 1.2
-  damage: 5
+  damagePerTick: 1
+  tickInterval: 0.3
 --- !u!212 &5585918102746625819
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -159,7 +160,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 6791786518647341090, guid: 8c81b9ea67b16cd4282b9472aee030a1, type: 3}
   m_Color: {r: 0.68235296, g: 0.037613455, b: 0, a: 1}
   m_FlipX: 0

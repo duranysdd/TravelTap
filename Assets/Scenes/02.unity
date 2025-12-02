@@ -16251,6 +16251,10 @@ MonoBehaviour:
   graundLayer:
     serializedVersion: 2
     m_Bits: 8
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 0.5
   respawnPoint: {fileID: 398376424}
   nearRespawnPoint: {fileID: 0}
   energyAmmo: 0
@@ -109737,6 +109741,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 296844546341603782, guid: c3eebb2f394cdf3448f4095a0c9ee555, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529314489152410993, guid: c3eebb2f394cdf3448f4095a0c9ee555, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 971387b07eec6b24aa90b492cbaa2bb5, type: 2}
+    - target: {fileID: 3529314489152410993, guid: c3eebb2f394cdf3448f4095a0c9ee555, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5560913235202129666, guid: 971387b07eec6b24aa90b492cbaa2bb5, type: 2}
+    - target: {fileID: 3529314489152410993, guid: c3eebb2f394cdf3448f4095a0c9ee555, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6206456274824887319, guid: c3eebb2f394cdf3448f4095a0c9ee555, type: 3}

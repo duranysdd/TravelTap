@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -26,6 +27,9 @@ public class Player : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb2d;
     private Animator anim;
+    public LayerMask enemyLayer;
+    public float attackRange = 0.5f;
+
 
     [Header("Respawn")]
     public Transform respawnPoint;
@@ -216,5 +220,8 @@ public int energyAmmo = 0;
     return atacando;
 }
 
-
+    internal void TakeDamage(int damage, float x)
+    {
+        throw new NotImplementedException();
+    }
 }
