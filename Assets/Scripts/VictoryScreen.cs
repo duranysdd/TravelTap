@@ -52,16 +52,16 @@ public class VictoryScreen : MonoBehaviour
         // ACTIVAR FONDO
         if (background != null) background.SetActive(true);
 
-        // MOSTRAR TEXTO DE VICTORIA
+        // VICTORIA
         victoryText.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(15f);
 
-        // PASAR A CREDITOS
+        // CREDITOS
         victoryText.gameObject.SetActive(false);
         creditsText.gameObject.SetActive(true);
 
-        // ACTIVAR LOGOS
+        // LOGOS
         if (logo1 != null) logo1.SetActive(true);
         if (logo2 != null) logo2.SetActive(true);
 
