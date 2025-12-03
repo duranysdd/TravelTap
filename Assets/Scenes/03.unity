@@ -101215,7 +101215,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -101593,7 +101593,7 @@ Transform:
   m_GameObject: {fileID: 1557222919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.6, y: -12.51, z: 0}
+  m_LocalPosition: {x: 68, y: -37.2, z: 0}
   m_LocalScale: {x: -0.065883294, y: 0.06310516, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -101679,7 +101679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   isInvincible: 0
   tieneMapa: 0
-  mapaUI: {fileID: 0}
+  mapaUI: {fileID: 1279148172}
   speed: 2
   tieneEspada: 0
   Jump: 3.2
