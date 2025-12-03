@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public int vidasActuales; 
     public int maxVidasLimit = 5; 
 
+    private Player player;  // ← REFERENCIA AL PLAYER
+
     private void Awake()
     {
         if (instance == null)
@@ -33,6 +35,22 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        BuscarPlayer();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        BuscarPlayer();
+    }
+
+    private void BuscarPlayer()
+    {
+        player = FindObjectOfType<Player>();
+    }
+
     public void MostrarMensaje(string texto, float tiempo = 3f)
     {
         if (mensajeUI != null)
@@ -135,5 +153,23 @@ public class GameManager : MonoBehaviour
             UIManager.instance.UpdateScore();
             UIManager.instance.UpdateHearts();
         }
+    }
+
+    public void RespawnPlayer()
+    {
+        if (player == null)
+        {
+            BuscarPlayer();
+            if (player == null) return;
+        }
+
+        // Reposicionar en el checkpoint
+        player.transform.position = player.checkPoint;
+
+        // Restaurar vidas
+        vidasActuales = maxVidas;
+
+        if (UIManager.instance != null)
+            UIManager.instance.UpdateHearts();
     }
 }

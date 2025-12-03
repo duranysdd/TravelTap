@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     [Header("Respawn")]
     public Transform respawnPoint;
     public Transform nearRespawnPoint;
+    public Vector3 checkPoint;
 
     [Header("Energy Ammo")]
 public int energyAmmo = 0;
@@ -188,15 +189,19 @@ public int energyAmmo = 0;
     }
 
     private void Die()
-    {
-        Debug.Log("Te moriste wey jaja");
-        transform.position = respawnPoint.position;
+{
+    Debug.Log("Te moriste wey jaja");
+    if (tieneMapa)
+        transform.position = checkPoint;
+    else
+        transform.position = respawnPoint.position; 
 
-        // Si todo va bien se restaura la vida si se muere
-        GameManager.instance.vidasActuales = GameManager.instance.maxVidas;
-        if (UIManager.instance != null)
-            UIManager.instance.UpdateHearts();
-    }
+    GameManager.instance.vidasActuales = GameManager.instance.maxVidas;
+
+    if (UIManager.instance != null)
+        UIManager.instance.UpdateHearts();
+}
+
 
     public void Atacando()
 {
